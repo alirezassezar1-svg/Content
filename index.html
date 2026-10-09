@@ -1,0 +1,3160 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080d">
+<title>Nononick Content Studio — تولید محتوا، سئو و بازنویسی با هوش مصنوعی</title>
+<meta name="description" content="Nononick Content Studio: ابزار رایگان تولید محتوا، نوشتن مقاله سئو، کپشن اینستاگرام، تقویم محتوایی، بازنویسی متن، تولید عنوان، متا دیسکریپشن و ده‌ها ابزار کاربردی دیگر. بدون ثبت‌نام شروع کنید.">
+<meta name="keywords" content="تولید محتوا, ابزار سئو, نویسنده هوش مصنوعی, کپشن اینستاگرام, تقویم محتوایی, بازنویسی متن, متا دیسکریپشن, Nononick">
+<link rel="canonical" href="https://nononick.com/content-studio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nononick Content Studio — هر چیزی که برای تولید محتوا لازم داری، یکجا">
+<meta property="og:description" content="ایده بگیر، بنویس، بازنویسی کن، سئو کن و برای شبکه‌های اجتماعی آماده‌اش کن.">
+<meta property="og:url" content="https://nononick.com/content-studio">
+<meta property="og:site_name" content="Nononick">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nononick Content Studio">
+<meta name="twitter:description" content="ابزار رایگان تولید محتوا، سئو و بازنویسی.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "WebApplication","name": "Nononick Content Studio","url": "https://nononick.com/content-studio","applicationCategory": "BusinessApplication","operatingSystem": "All","offers": { "@type": "Offer", "price": "0", "priceCurrency": "IRR" },"description": "ابزار وب‌محور تولید محتوا، سئو، بازنویسی و تقویم محتوایی","publisher": { "@type": "Organization", "name": "Nononick" }},
+    {"@type": "FAQPage","mainEntity": [
+      {"@type": "Question", "name": "Nononick Content Studio رایگان است؟", "acceptedAnswer": { "@type": "Answer", "text": "بله، تمام ابزارها بدون نیاز به ثبت‌نام و به صورت رایگان قابل استفاده هستند." }},
+      {"@type": "Question", "name": "آیا محتوای تولیدشده قابل ویرایش است؟", "acceptedAnswer": { "@type": "Answer", "text": "بله، خروجی در یک ویرایشگر کامل نمایش داده می‌شود و می‌توانید کپی، دانلود، بازنویسی یا کوتاه/بلند کنید." }},
+      {"@type": "Question", "name": "آیا اطلاعات من ذخیره می‌شود؟", "acceptedAnswer": { "@type": "Answer", "text": "تاریخچه فقط در مرورگر خود شما (LocalStorage) ذخیره می‌شود و به سروری ارسال نمی‌شود." }}
+    ]},
+    {"@type": "BreadcrumbList","itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Nononick", "item": "https://nononick.com/" },
+      {"@type": "ListItem", "position": 2, "name": "Content Studio", "item": "https://nononick.com/content-studio" }
+    ]}
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#07080d; --bg2:#0b0e17; --bg3:#0e1220;
+  --panel:rgba(255,255,255,.035); --panel2:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.08); --border2:rgba(255,255,255,.14);
+  --text:#e8ecf5; --muted:#8b93a7; --muted2:#6b7385;
+  --cyan:#4de2ff; --purple:#a06bff; --pink:#ff5cae; --green:#3ee6a0; --amber:#ffb84d; --red:#ff5c7a;
+  --grad:linear-gradient(135deg,#4de2ff,#a06bff 55%,#ff5cae);
+  --grad2:linear-gradient(135deg,#4de2ff,#a06bff);
+  --r:16px; --r2:22px;
+  --shadow:0 20px 60px -20px rgba(0,0,0,.7);
+  --glow:0 0 0 1px rgba(77,226,255,.15),0 20px 60px -20px rgba(77,226,255,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Vazirmatn',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;
+  min-height:100vh;overflow-x:hidden;
+  font-feature-settings:"ss01","ss02";
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 85% -5%,rgba(77,226,255,.10),transparent 60%),
+    radial-gradient(800px 600px at 10% 10%,rgba(160,107,255,.10),transparent 60%),
+    radial-gradient(700px 500px at 50% 110%,rgba(255,92,174,.08),transparent 60%),
+    var(--bg);
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer;border:none;background:none}
+::selection{background:rgba(160,107,255,.4)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.2)}
+
+/* Layout */
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+header{
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  background:rgba(7,8,13,.7);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;gap:18px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.4px;flex-shrink:0}
+.logo-mark{
+  width:34px;height:34px;border-radius:10px;background:var(--grad);
+  display:grid;place-items:center;font-size:16px;font-weight:900;color:#07080d;
+  box-shadow:0 0 24px -4px rgba(77,226,255,.5);
+}
+.logo small{font-size:11px;color:var(--muted);font-weight:500;display:block;line-height:1;margin-top:2px}
+.nav-links{display:flex;gap:4px;flex:1;margin-inline-start:14px;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  padding:8px 14px;border-radius:10px;font-size:14px;color:var(--muted);
+  white-space:nowrap;transition:.2s;font-weight:500;
+}
+.nav-links a:hover{color:var(--text);background:var(--panel)}
+.nav-links a.active{color:var(--text);background:var(--panel2)}
+.nav-actions{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.btn{
+  padding:9px 16px;border-radius:11px;font-size:14px;font-weight:600;
+  border:1px solid var(--border2);background:var(--panel);color:var(--text);
+  transition:.2s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+}
+.btn:hover:not(:disabled){background:var(--panel2);border-color:var(--border2);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn-primary{
+  background:var(--grad);color:#07080d;border:none;font-weight:700;
+  box-shadow:0 8px 30px -8px rgba(160,107,255,.6);
+}
+.btn-primary:hover:not(:disabled){box-shadow:0 12px 40px -8px rgba(160,107,255,.8);filter:brightness(1.06)}
+.btn-ghost{background:transparent;border-color:var(--border)}
+.btn-danger{background:rgba(255,92,122,.12);border-color:rgba(255,92,122,.35);color:var(--red)}
+.btn-danger:hover:not(:disabled){background:rgba(255,92,122,.2)}
+.btn-sm{padding:7px 12px;font-size:13px;border-radius:9px}
+.btn-lg{padding:14px 26px;font-size:15px;border-radius:14px}
+.btn-block{width:100%;justify-content:center}
+.menu-btn{display:none}
+.icon-btn{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  background:var(--panel);border:1px solid var(--border);color:var(--muted);transition:.2s;font-size:14px;
+}
+.icon-btn:hover{color:var(--text);border-color:var(--border2);background:var(--panel2)}
+
+/* Server Badge */
+.server-badge{
+  display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:100px;
+  font-size:12.5px;font-weight:600;background:rgba(62,230,160,.08);
+  border:1px solid rgba(62,230,160,.25);color:var(--green);cursor:pointer;transition:.2s;
+  white-space:nowrap;
+}
+.server-badge:hover{background:rgba(62,230,160,.15)}
+.server-badge.off{background:rgba(255,92,122,.08);border-color:rgba(255,92,122,.25);color:var(--red)}
+.server-badge.off:hover{background:rgba(255,92,122,.15)}
+.server-badge .dot{width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor;flex-shrink:0}
+.server-badge.off .dot{animation:pulse 2s infinite}
+@media(max-width:980px){
+  .nav-links{display:none}
+  .menu-btn{display:inline-flex}
+  .nav-actions .hide-mobile{display:none}
+  .server-badge{font-size:11px;padding:5px 10px}
+}
+
+/* Hero */
+.hero{padding:72px 0 40px;text-align:center;position:relative}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:100px;
+  background:var(--panel);border:1px solid var(--border2);font-size:13px;color:var(--muted);
+  margin-bottom:22px;font-weight:500;
+}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+h1.hero-title{
+  font-size:clamp(28px,5.2vw,54px);font-weight:800;line-height:1.25;
+  letter-spacing:-1.2px;margin-bottom:18px;
+}
+h1.hero-title .grad{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--muted);max-width:640px;margin:0 auto 34px;line-height:1.8}
+
+.hero-input{
+  max-width:760px;margin:0 auto 16px;position:relative;
+  background:rgba(255,255,255,.045);border:1px solid var(--border2);border-radius:var(--r2);
+  padding:8px;display:flex;gap:8px;align-items:center;
+  box-shadow:var(--shadow);backdrop-filter:blur(20px);transition:.3s;
+}
+.hero-input:focus-within{border-color:rgba(77,226,255,.4);box-shadow:var(--glow)}
+.hero-input input{
+  flex:1;background:transparent;border:none;outline:none;padding:14px 16px;font-size:16px;
+}
+.hero-input input::placeholder{color:var(--muted2)}
+.quick-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:800px;margin:18px auto 0}
+.chip{
+  padding:8px 15px;border-radius:100px;font-size:13.5px;font-weight:500;
+  background:var(--panel);border:1px solid var(--border);color:var(--muted);
+  transition:.2s;cursor:pointer;
+}
+.chip:hover{color:var(--text);border-color:rgba(77,226,255,.3);background:var(--panel2);transform:translateY(-2px)}
+
+/* Sections */
+section.block{padding:56px 0}
+.sec-head{margin-bottom:30px}
+.sec-eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:10px;
+}
+.sec-title{font-size:clamp(22px,3.4vw,34px);font-weight:800;letter-spacing:-.7px;line-height:1.3}
+.sec-desc{color:var(--muted);margin-top:10px;max-width:620px;font-size:15px}
+
+/* Cards grid */
+.grid{display:grid;gap:14px}
+.grid-3{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--r);
+  padding:20px;transition:.25s;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:8px;cursor:pointer;
+}
+.card:hover{
+  border-color:rgba(77,226,255,.25);background:var(--panel2);
+  transform:translateY(-3px);box-shadow:var(--shadow);
+}
+.card .ico{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  font-size:20px;background:rgba(77,226,255,.08);border:1px solid rgba(77,226,255,.18);
+  margin-bottom:6px;
+}
+.card h3{font-size:15.5px;font-weight:700;letter-spacing:-.2px}
+.card p{font-size:13px;color:var(--muted);line-height:1.7}
+.card .arrow{
+  position:absolute;top:20px;left:20px;color:var(--muted2);font-size:18px;
+  transition:.25s;opacity:0;
+}
+.card:hover .arrow{opacity:1;transform:translateX(-4px);color:var(--cyan)}
+
+/* Workflow */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.flow-step{
+  padding:10px 18px;border-radius:100px;font-size:13.5px;font-weight:600;
+  background:var(--panel);border:1px solid var(--border);color:var(--text);
+  transition:.25s;
+}
+.flow-step:hover{background:var(--panel2);border-color:rgba(160,107,255,.4)}
+.flow-arrow{color:var(--muted2);font-size:14px}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:34px}
+.stat{
+  text-align:center;padding:20px 12px;border-radius:var(--r);
+  background:var(--panel);border:1px solid var(--border);
+}
+.stat b{font-size:26px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:block}
+.stat span{font-size:12.5px;color:var(--muted)}
+
+/* Studio */
+.studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(max-width:900px){.studio-grid{grid-template-columns:1fr}}
+.panel{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--r2);
+  padding:22px;backdrop-filter:blur(20px);
+}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.panel-title{font-size:16px;font-weight:700;display:flex;align-items:center;gap:10px}
+.panel-title .step-n{
+  width:24px;height:24px;border-radius:8px;background:var(--grad2);color:#07080d;
+  display:grid;place-items:center;font-size:12px;font-weight:800;
+}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;color:var(--text)}
+.field label .opt{color:var(--muted2);font-weight:400;font-size:11.5px}
+.field input,.field textarea,.field select{
+  width:100%;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border);outline:none;transition:.2s;font-size:14.5px;
+  color:var(--text);resize:vertical;
+}
+.field input:focus,.field textarea:focus,.field select:focus{
+  border-color:rgba(77,226,255,.45);background:rgba(77,226,255,.04);
+  box-shadow:0 0 0 3px rgba(77,226,255,.08);
+}
+.field textarea{min-height:90px;line-height:1.7}
+.field select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' stroke='%238b93a7' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");background-repeat:no-repeat;background-position:left 14px center;padding-left:36px}
+.field .help{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.6}
+.field .help a{color:var(--cyan)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{
+  padding:7px 13px;border-radius:100px;font-size:12.5px;font-weight:500;
+  background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted);
+  transition:.2s;cursor:pointer;
+}
+.pill:hover{border-color:var(--border2);color:var(--text)}
+.pill.on{background:rgba(77,226,255,.12);border-color:rgba(77,226,255,.5);color:var(--cyan)}
+
+/* Notice */
+.notice{padding:12px 16px;border-radius:12px;font-size:13px;line-height:1.7;margin-bottom:14px}
+.notice.info{background:rgba(77,226,255,.06);border:1px solid rgba(77,226,255,.22);color:var(--cyan)}
+.notice.warn{background:rgba(255,184,77,.08);border:1px solid rgba(255,184,77,.25);color:var(--amber)}
+.notice.good{background:rgba(62,230,160,.08);border:1px solid rgba(62,230,160,.25);color:var(--green)}
+.notice.err{background:rgba(255,92,122,.08);border:1px solid rgba(255,92,122,.25);color:var(--red)}
+
+/* Type selector */
+.type-bar{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;margin-bottom:20px;scrollbar-width:none}
+.type-bar::-webkit-scrollbar{display:none}
+.type-btn{
+  flex-shrink:0;padding:9px 16px;border-radius:11px;font-size:13.5px;font-weight:600;
+  background:var(--panel);border:1px solid var(--border);color:var(--muted);transition:.2s;
+}
+.type-btn:hover{color:var(--text);border-color:var(--border2)}
+.type-btn.on{background:var(--grad2);color:#07080d;border-color:transparent}
+
+/* Output editor */
+.output-empty{
+  display:grid;place-items:center;text-align:center;padding:60px 20px;
+  color:var(--muted2);font-size:14px;border:1.5px dashed var(--border);border-radius:16px;
+}
+.output-empty .big{font-size:38px;margin-bottom:12px;opacity:.5}
+.editor-body{
+  background:rgba(0,0,0,.25);border:1px solid var(--border);border-radius:14px;
+  padding:18px;font-size:14.5px;line-height:1.9;white-space:pre-wrap;
+  max-height:520px;overflow-y:auto;outline:none;
+}
+.editor-body:focus{border-color:rgba(77,226,255,.35)}
+.editor-body h1,.editor-body h2,.editor-body h3{margin:14px 0 8px;font-weight:700}
+.editor-body h1{font-size:20px}.editor-body h2{font-size:17px;color:var(--cyan)}.editor-body h3{font-size:15px}
+.editor-body strong{color:#fff}
+.toolbar{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.tbtn{
+  padding:7px 12px;border-radius:9px;font-size:12.5px;font-weight:600;
+  background:var(--panel);border:1px solid var(--border);color:var(--muted);
+  transition:.2s;display:inline-flex;align-items:center;gap:5px;
+}
+.tbtn:hover:not(:disabled){color:var(--text);border-color:var(--border2);background:var(--panel2)}
+.tbtn.primary{background:var(--grad2);color:#07080d;border-color:transparent}
+.tbtn.primary:hover:not(:disabled){filter:brightness(1.08)}
+.tbtn:disabled{opacity:.5;cursor:not-allowed}
+
+/* SEO score */
+.seo-score{
+  display:flex;align-items:center;gap:18px;padding:18px;border-radius:16px;
+  background:linear-gradient(135deg,rgba(77,226,255,.08),rgba(160,107,255,.08));
+  border:1px solid rgba(77,226,255,.2);margin-bottom:18px;
+}
+.score-ring{
+  width:84px;height:84px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;font-weight:800;font-size:22px;
+  background:conic-gradient(var(--cyan) calc(var(--p)*1%), rgba(255,255,255,.06) 0);
+  position:relative;
+}
+.score-ring::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--bg3)}
+.score-ring span{position:relative;z-index:1}
+.score-list{display:grid;gap:6px;font-size:13px}
+.score-item{display:flex;align-items:center;gap:8px;color:var(--muted)}
+.score-item .ok{color:var(--green)}
+.score-item .bad{color:var(--pink)}
+
+/* Calendar */
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.cal-day{
+  background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;
+  transition:.2s;
+}
+.cal-day:hover{border-color:rgba(160,107,255,.35);transform:translateY(-2px)}
+.cal-day .dnum{font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:1px;margin-bottom:6px}
+.cal-day .dtitle{font-size:14.5px;font-weight:700;margin-bottom:8px;line-height:1.5}
+.cal-day .dmeta{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.cal-day .tag{
+  display:inline-block;padding:3px 8px;border-radius:6px;font-size:10.5px;font-weight:600;
+  background:rgba(77,226,255,.1);color:var(--cyan);border:1px solid rgba(77,226,255,.2);
+  margin-bottom:8px;
+}
+
+/* Tools */
+.tool-row{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:13px;
+  background:var(--panel);border:1px solid var(--border);transition:.2s;cursor:pointer;
+  margin-bottom:9px;
+}
+.tool-row:hover{background:var(--panel2);border-color:rgba(77,226,255,.25);transform:translateX(-3px)}
+.tool-row .ico{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:18px;background:rgba(160,107,255,.08);border:1px solid rgba(160,107,255,.18);flex-shrink:0}
+.tool-row .info{flex:1;min-width:0}
+.tool-row .info b{font-size:14.5px;font-weight:700;display:block}
+.tool-row .info span{font-size:12.5px;color:var(--muted)}
+.tool-row .go{color:var(--muted2);font-size:18px;transition:.2s}
+.tool-row:hover .go{color:var(--cyan);transform:translateX(-4px)}
+
+/* History */
+.hist-group{margin-bottom:24px}
+.hist-group h4{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;font-weight:700}
+.hist-item{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:13px;
+  background:var(--panel);border:1px solid var(--border);margin-bottom:8px;transition:.2s;
+}
+.hist-item:hover{border-color:var(--border2);background:var(--panel2)}
+.hist-item .info{flex:1;min-width:0}
+.hist-item .info b{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hist-item .info span{font-size:12px;color:var(--muted)}
+.hist-item .acts{display:flex;gap:6px}
+
+/* Prompt builder */
+.prompt-out{
+  background:#04050a;border:1px solid var(--border);border-radius:14px;
+  padding:18px;font-family:ui-monospace,'Courier New',monospace;font-size:13px;
+  line-height:1.8;white-space:pre-wrap;color:#b7c4d8;max-height:420px;overflow-y:auto;
+  direction:ltr;text-align:left;
+}
+
+/* FAQ */
+.faq-item{
+  border:1px solid var(--border);border-radius:14px;margin-bottom:10px;
+  background:var(--panel);overflow:hidden;transition:.2s;
+}
+.faq-item:hover{border-color:var(--border2)}
+.faq-q{
+  padding:17px 20px;font-weight:600;font-size:15px;display:flex;
+  justify-content:space-between;align-items:center;cursor:pointer;gap:12px;
+}
+.faq-q .pm{color:var(--cyan);font-size:20px;font-weight:300;transition:.3s;flex-shrink:0}
+.faq-item.open .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:.3s;color:var(--muted);font-size:14px;line-height:1.9}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a > div{padding:0 20px 18px}
+
+/* Footer */
+footer{
+  margin-top:80px;border-top:1px solid var(--border);
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.3));
+  padding:50px 0 30px;
+}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px}
+@media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:26px}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand p{color:var(--muted);font-size:13.5px;margin-top:14px;max-width:340px;line-height:1.8}
+.foot-col h5{font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.4px}
+.foot-col a{display:block;color:var(--muted);font-size:13.5px;padding:5px 0;transition:.2s;cursor:pointer}
+.foot-col a:hover{color:var(--cyan);transform:translateX(-3px)}
+.foot-bottom{
+  margin-top:40px;padding-top:22px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  color:var(--muted2);font-size:13px;
+}
+
+/* Toast */
+.toast-wrap{position:fixed;bottom:24px;left:24px;z-index:999;display:flex;flex-direction:column;gap:10px}
+.toast{
+  padding:13px 18px;border-radius:12px;background:rgba(20,24,36,.95);
+  border:1px solid rgba(77,226,255,.3);color:var(--text);font-size:14px;font-weight:500;
+  box-shadow:0 20px 50px -10px rgba(0,0,0,.8);backdrop-filter:blur(20px);
+  animation:slideIn .3s;display:flex;align-items:center;gap:10px;max-width:340px;
+}
+.toast.error{border-color:rgba(255,92,122,.35)}
+.toast .tick{color:var(--green);font-size:16px}
+.toast .tick.err{color:var(--red)}
+@keyframes slideIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* Modal */
+.modal{
+  position:fixed;inset:0;z-index:200;background:rgba(4,5,10,.75);
+  backdrop-filter:blur(10px);display:none;place-items:center;padding:20px;overflow-y:auto;
+}
+.modal.on{display:grid}
+.modal-card{
+  background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r2);
+  padding:26px;max-width:680px;width:100%;max-height:88vh;overflow-y:auto;
+  box-shadow:0 40px 100px -20px #000;animation:pop .3s;
+}
+@keyframes pop{from{opacity:0;transform:scale(.95) translateY(10px)}to{opacity:1;transform:none}}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.modal-head h3{font-size:18px;font-weight:700}
+
+/* Log */
+.log{
+  background:#04050a;border:1px solid var(--border);border-radius:14px;
+  padding:16px;font-family:ui-monospace,'Courier New',monospace;
+  font-size:12.5px;line-height:1.85;white-space:pre-wrap;
+  color:#b7c4d8;min-height:120px;max-height:400px;overflow-y:auto;
+  direction:ltr;text-align:left;
+}
+.log .ok{color:#3ee6a0}
+.log .err{color:#ff5c7a}
+.log .info{color:#4de2ff}
+.log .warn{color:#ffb84d}
+.log .muted{color:#6b7385}
+
+/* Provider Cards */
+.provider-grid{display:grid;gap:10px}
+.provider-card{
+  display:flex;gap:14px;padding:14px;border-radius:14px;
+  background:var(--panel);border:1.5px solid var(--border);cursor:pointer;transition:.2s;
+}
+.provider-card:hover{border-color:var(--border2);background:var(--panel2)}
+.provider-card.on{
+  border-color:rgba(77,226,255,.55);background:rgba(77,226,255,.06);
+  box-shadow:0 0 0 3px rgba(77,226,255,.08);
+}
+.provider-card .pico{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;
+  background:rgba(160,107,255,.08);border:1px solid rgba(160,107,255,.18);flex-shrink:0;
+}
+.provider-card .pinfo{flex:1;min-width:0}
+.provider-card .pinfo b{font-size:14.5px;display:flex;align-items:center;gap:8px;margin-bottom:3px;flex-wrap:wrap}
+.provider-card .pinfo span{font-size:12.5px;color:var(--muted);display:block;line-height:1.6}
+.provider-card .pbadge{
+  font-size:10.5px;padding:2px 7px;border-radius:6px;
+  background:rgba(62,230,160,.15);color:var(--green);border:1px solid rgba(62,230,160,.3);font-weight:600;
+}
+
+/* Steps */
+.steps{display:grid;gap:8px}
+.step{
+  display:flex;gap:12px;padding:12px 16px;border-radius:12px;
+  background:var(--panel);border:1px solid var(--border);
+  font-size:13.5px;line-height:1.6;align-items:flex-start;
+}
+.step .n{
+  width:22px;height:22px;border-radius:6px;background:rgba(77,226,255,.12);
+  border:1px solid rgba(77,226,255,.3);color:var(--cyan);
+  display:grid;place-items:center;font-size:11.5px;font-weight:700;flex-shrink:0;
+}
+.step .content{flex:1}
+.step .content b{display:block;margin-bottom:2px}
+.step .content span{color:var(--muted);font-size:12.5px}
+.step .content a{color:var(--cyan)}
+
+/* Server Card */
+.server-card{
+  padding:20px;border-radius:16px;
+  background:linear-gradient(135deg,rgba(62,230,160,.06),rgba(77,226,255,.06));
+  border:1px solid rgba(62,230,160,.25);margin-bottom:20px;
+}
+.server-card .label{
+  font-size:11.5px;color:var(--muted);letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:6px;font-weight:700;
+}
+.server-card .url{
+  font-family:ui-monospace,monospace;font-size:13.5px;
+  background:rgba(0,0,0,.35);padding:10px 14px;border-radius:10px;
+  direction:ltr;text-align:left;word-break:break-all;
+  border:1px solid var(--border);margin-bottom:12px;
+}
+.server-card .actions{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Typing */
+.typing{display:inline-flex;gap:4px;align-items:center}
+.typing span{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:blink 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
+/* misc */
+.hidden{display:none!important}
+.center{text-align:center}
+.mt-20{margin-top:20px}
+.mt-30{margin-top:30px}
+.mb-20{margin-bottom:20px}
+.divider{height:1px;background:var(--border);margin:26px 0}
+kbd{
+  background:var(--panel2);border:1px solid var(--border2);border-radius:6px;
+  padding:2px 7px;font-size:11.5px;font-family:ui-monospace,monospace;
+}
+.tag{font-size:11.5px;padding:4px 10px;border-radius:100px;background:rgba(160,107,255,.1);color:var(--purple);border:1px solid rgba(160,107,255,.2);display:inline-block;margin:3px}
+
+@media print{
+  header,footer,.toolbar,.nav-actions,.hero-input,.quick-chips,.type-bar{display:none!important}
+  body{background:#fff;color:#000}
+  .editor-body{max-height:none;border:none;background:#fff;color:#000}
+}
+@media(max-width:600px){
+  .hero{padding:44px 0 26px}
+  section.block{padding:36px 0}
+  .panel{padding:17px}
+  .wrap{padding:0 14px}
+  .toast-wrap{left:14px;right:14px;bottom:14px}
+  .toast{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo" onclick="nav('home');return false">
+      <span class="logo-mark">N</span>
+      <span>Nononick<small>Content Studio</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#studio" data-nav="studio">استودیو</a>
+      <a href="#seo" data-nav="seo">سئو</a>
+      <a href="#repurpose" data-nav="repurpose">بازتولید</a>
+      <a href="#calendar" data-nav="calendar">تقویم</a>
+      <a href="#prompt" data-nav="prompt">Prompt ساز</a>
+      <a href="#local" data-nav="local">محلی</a>
+      <a href="#tools" data-nav="tools">ابزارها</a>
+      <a href="#history" data-nav="history">تاریخچه</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="server-badge off" id="serverBadge" onclick="openServerPanel()" title="تنظیمات سرور هوش مصنوعی">
+        <span class="dot"></span>
+        <span id="serverBadgeText">سرور: تنظیم نشده</span>
+      </button>
+      <a href="#studio" class="btn btn-primary btn-sm hide-mobile" onclick="nav('studio');return false">شروع کنید ✦</a>
+      <button class="btn btn-sm menu-btn" onclick="toggleMobileMenu()" aria-label="منو">☰</button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden" style="border-top:1px solid var(--border);padding:12px 20px">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <a href="#studio" class="btn btn-sm" onclick="nav('studio')">استودیو</a>
+      <a href="#seo" class="btn btn-sm" onclick="nav('seo')">سئو</a>
+      <a href="#repurpose" class="btn btn-sm" onclick="nav('repurpose')">بازتولید</a>
+      <a href="#calendar" class="btn btn-sm" onclick="nav('calendar')">تقویم</a>
+      <a href="#prompt" class="btn btn-sm" onclick="nav('prompt')">Prompt</a>
+      <a href="#local" class="btn btn-sm" onclick="nav('local')">محلی</a>
+      <a href="#tools" class="btn btn-sm" onclick="nav('tools')">ابزارها</a>
+      <a href="#history" class="btn btn-sm" onclick="nav('history')">تاریخچه</a>
+      <button class="btn btn-sm" onclick="openServerPanel()">⚙️ تنظیمات AI</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== HOME ========== -->
+<section id="view-home" class="view">
+  <div class="wrap">
+    <div class="hero">
+      <div class="badge"><span class="dot"></span> رایگان · بدون ثبت‌نام · با هوش مصنوعی</div>
+      <h1 class="hero-title">هر چیزی که برای <span class="grad">تولید محتوا</span> لازم داری، یکجا.</h1>
+      <p class="hero-sub">ایده بگیر، بنویس، بازنویسی کن، سئو کن و برای شبکه‌های اجتماعی آماده‌اش کن.</p>
+      <div class="hero-input">
+        <input id="heroInput" type="text" placeholder="امروز چه چیزی می‌خواهی بسازی؟ مثلاً: مقاله درباره طراحی سایت" onkeydown="if(event.key==='Enter')heroGo()">
+        <button class="btn btn-primary btn-lg" onclick="heroGo()">بساز ✦</button>
+      </div>
+      <div class="quick-chips">
+        <button class="chip" onclick="quickStart('blog')">✍️ نوشتن مقاله</button>
+        <button class="chip" onclick="quickStart('idea')">💡 تولید ایده</button>
+        <button class="chip" onclick="quickStart('seo')">🔍 محتوای سئو</button>
+        <button class="chip" onclick="quickStart('instagram')">📸 کپشن اینستاگرام</button>
+        <button class="chip" onclick="quickStart('rewrite')">♻️ بازنویسی متن</button>
+        <button class="chip" onclick="quickStart('calendar')">📅 تقویم محتوایی</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>۳۸+</b><span>نوع محتوا</span></div>
+      <div class="stat"><b>۱۶</b><span>ابزار رایگان</span></div>
+      <div class="stat"><b>۴</b><span>ارائه‌دهنده AI</span></div>
+      <div class="stat"><b>۰</b><span>نیاز به ثبت‌نام</span></div>
+    </div>
+  </div>
+
+  <!-- Server Status Panel -->
+  <div class="wrap block" style="padding-top:44px;padding-bottom:0">
+    <div class="panel" style="background:linear-gradient(135deg,rgba(62,230,160,.04),rgba(77,226,255,.04))">
+      <div class="panel-head">
+        <div class="panel-title"><span class="step-n">⚡</span> وضعیت سرور هوش مصنوعی</div>
+      </div>
+      <div id="homeServerStatus"></div>
+    </div>
+  </div>
+
+  <!-- Popular tools -->
+  <div class="wrap block">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Popular Tools</div>
+      <h2 class="sec-title">پرکاربردترین ابزارها</h2>
+      <p class="sec-desc">مستقیم از محبوب‌ترین ابزارها شروع کنید. هر ابزار در یک کلیک باز می‌شود.</p>
+    </div>
+    <div class="grid grid-4" id="popularGrid"></div>
+  </div>
+
+  <!-- Workflow -->
+  <div class="wrap block">
+    <div class="sec-head center">
+      <div class="sec-eyebrow">AI Content Workflow</div>
+      <h2 class="sec-title">از ایده تا انتشار، یک مسیر یکپارچه</h2>
+      <p class="sec-desc" style="margin-inline:auto">فقط یک Text Generator نیست؛ یک گردش‌کار کامل محتوا.</p>
+    </div>
+    <div class="flow" style="justify-content:center">
+      <span class="flow-step">💡 IDEA</span><span class="flow-arrow">←</span>
+      <span class="flow-step">🗂 OUTLINE</span><span class="flow-arrow">←</span>
+      <span class="flow-step">✍️ DRAFT</span><span class="flow-arrow">←</span>
+      <span class="flow-step">🔍 SEO</span><span class="flow-arrow">←</span>
+      <span class="flow-step">✏️ EDIT</span><span class="flow-arrow">←</span>
+      <span class="flow-step">📱 SOCIAL</span><span class="flow-arrow">←</span>
+      <span class="flow-step">🚀 PUBLISH</span>
+    </div>
+  </div>
+
+  <!-- All tools -->
+  <div class="wrap block">
+    <div class="sec-head">
+      <div class="sec-eyebrow">All Content Types</div>
+      <h2 class="sec-title">همه انواع تولید محتوا</h2>
+      <p class="sec-desc">۳۸+ نوع محتوا برای هر کسب‌وکار، فروشگاه، فریلنسر، پزشک، وکیل، رستوران و برند شخصی.</p>
+    </div>
+    <div class="grid grid-3" id="allTypesGrid"></div>
+  </div>
+
+  <!-- Repurposing promo -->
+  <div class="wrap block">
+    <div class="panel" style="padding:32px;text-align:center;background:linear-gradient(135deg,rgba(77,226,255,.06),rgba(160,107,255,.06))">
+      <div class="sec-eyebrow">Content Repurposing</div>
+      <h2 class="sec-title" style="margin-bottom:10px">یک محتوا، چندین محتوا</h2>
+      <p class="sec-desc" style="margin:0 auto 22px">یک مقاله وارد کن، در چند ثانیه ۵ کپشن اینستاگرام، ۳ پست لینکدین، ۵ پست X، سناریوی Reels، ۱۰ Hook و ده‌ها خروجی دیگر بگیر.</p>
+      <button class="btn btn-primary btn-lg" onclick="nav('repurpose')">شروع بازتولید ✦</button>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="wrap block">
+    <div class="sec-head">
+      <div class="sec-eyebrow">FAQ</div>
+      <h2 class="sec-title">سوالات متداول</h2>
+    </div>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- ========== STUDIO ========== -->
+<section id="view-studio" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">Tool Workspace</div>
+      <h1 class="sec-title" style="font-size:26px">استودیو محتوا</h1>
+      <p class="sec-desc">نوع محتوا را انتخاب کن، فرم را پر کن و خروجی حرفه‌ای از هوش مصنوعی بگیر.</p>
+    </div>
+
+    <div class="type-bar" id="typeBar"></div>
+
+    <div class="studio-grid">
+      <!-- Form -->
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="step-n">۱</span> ورودی هوشمند</div>
+          <button class="btn btn-sm" onclick="resetForm()">پاک‌سازی</button>
+        </div>
+        <div id="dynamicForm"></div>
+        <button class="btn btn-primary btn-lg" style="width:100%;margin-top:8px;justify-content:center" id="btnGenerate" onclick="runGenerate()">
+          تولید با هوش مصنوعی ✦
+        </button>
+        <p style="font-size:12px;color:var(--muted2);margin-top:10px;text-align:center">خروجی به‌صورت خودکار ذخیره می‌شود · قابل ویرایش و دانلود</p>
+      </div>
+
+      <!-- Output -->
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="step-n">۲</span> خروجی و ویرایشگر</div>
+          <div style="display:flex;gap:6px">
+            <button class="tbtn" onclick="clearOutput()">پاک کردن</button>
+            <button class="tbtn primary" onclick="regenerate()">↻ دوباره</button>
+          </div>
+        </div>
+
+        <div id="seoScoreBox" class="hidden"></div>
+        <div id="outputEmpty" class="output-empty">
+          <div>
+            <div class="big">✨</div>
+            <div>خروجی اینجا نمایش داده می‌شود</div>
+            <div style="font-size:12.5px;margin-top:6px;color:var(--muted2)">فرم را پر کن و روی «تولید با هوش مصنوعی» بزن</div>
+          </div>
+        </div>
+        <div id="outputBox" class="hidden">
+          <div class="editor-body" id="editorBody" contenteditable="true" spellcheck="false"></div>
+          <div class="toolbar">
+            <button class="tbtn primary" onclick="copyOutput()">📋 کپی</button>
+            <button class="tbtn" onclick="copyMarkdown()">⬇️ کپی Markdown</button>
+            <button class="tbtn" onclick="downloadTxt()">📄 TXT</button>
+            <button class="tbtn" onclick="downloadHtml()">🌐 HTML</button>
+            <button class="tbtn" onclick="window.print()">🖨 چاپ</button>
+            <button class="tbtn" onclick="transformOutput('improve')">✨ بهبود</button>
+            <button class="tbtn" onclick="transformOutput('shorten')">کوتاه‌تر</button>
+            <button class="tbtn" onclick="transformOutput('expand')">بلندتر</button>
+            <button class="tbtn" onclick="transformOutput('rewrite')">بازنویسی</button>
+            <button class="tbtn" onclick="transformOutput('tone')">تغییر لحن</button>
+            <button class="tbtn" onclick="shareOutput()">🔗 اشتراک</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SEO ========== -->
+<section id="view-seo" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">SEO Mode</div>
+      <h1 class="sec-title" style="font-size:26px">پکیج کامل محتوای سئو</h1>
+      <p class="sec-desc">موضوع و کلمه کلیدی را وارد کن؛ پکیج کامل شامل مقاله، تگ‌ها، اسکیما و امتیاز سئو را بگیر.</p>
+    </div>
+
+    <div class="studio-grid">
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title"><span class="step-n">۱</span> اطلاعات سئو</div></div>
+        <div class="field">
+          <label>موضوع اصلی <span class="opt">(الزامی)</span></label>
+          <input id="seoTopic" type="text" placeholder="مثلاً: آموزش طراحی سایت در اندیمشک">
+        </div>
+        <div class="field">
+          <label>کلمه کلیدی اصلی <span class="opt">(الزامی)</span></label>
+          <input id="seoKw" type="text" placeholder="مثلاً: طراحی سایت اندیمشک">
+        </div>
+        <div class="field">
+          <label>کلمات کلیدی فرعی</label>
+          <input id="seoKw2" type="text" placeholder="با کاما جدا کنید: طراحی سایت, سئو, فروشگاه اینترنتی">
+        </div>
+        <div class="row2">
+          <div class="field"><label>مخاطب</label><input id="seoAud" type="text" placeholder="مثلاً: صاحبان کسب‌وکار"></div>
+          <div class="field"><label>شهر / کشور</label><input id="seoCity" type="text" placeholder="مثلاً: اندیمشک"></div>
+        </div>
+        <div class="field"><label>نام برند</label><input id="seoBrand" type="text" placeholder="Nononick"></div>
+        <div class="field"><label>CTA</label><input id="seoCta" type="text" placeholder="مثلاً: برای مشاوره رایگان تماس بگیرید"></div>
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="btnSEO" onclick="runSEO()">تولید پکیج سئو ✦</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="step-n">۲</span> خروجی پکیج سئو</div>
+          <button class="tbtn" onclick="copySEOResult()">📋 کپی</button>
+        </div>
+        <div id="seoOutputEmpty" class="output-empty">
+          <div><div class="big">🔍</div><div>پکیج سئو اینجا ساخته می‌شود</div></div>
+        </div>
+        <div id="seoOutputBox" class="hidden">
+          <div class="editor-body" id="seoEditorBody" style="max-height:600px"></div>
+          <div class="toolbar">
+            <button class="tbtn primary" onclick="copySEOResult()">📋 کپی پکیج</button>
+            <button class="tbtn" onclick="downloadSEOResult()">📄 دانلود TXT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REPURPOSE ========== -->
+<section id="view-repurpose" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">Content Repurposing</div>
+      <h1 class="sec-title" style="font-size:26px">یک محتوا، چندین محتوا</h1>
+      <p class="sec-desc">یک متن یا مقاله وارد کن و در یک کلیک ده‌ها خروجی برای شبکه‌های اجتماعی بگیر.</p>
+    </div>
+
+    <div class="panel" style="margin-bottom:20px">
+      <div class="field">
+        <label>متن یا مقاله خود را وارد کنید</label>
+        <textarea id="repurposeInput" style="min-height:160px" placeholder="متن مقاله، پست یا هر محتوایی که می‌خواهید بازتولید کنید را اینجا بچسبانید..."></textarea>
+      </div>
+      <div class="row2" style="margin-bottom:14px">
+        <div class="field"><label>موضوع (اختیاری)</label><input id="repurposeTopic" type="text" placeholder="مثلاً: طراحی سایت"></div>
+        <div class="field"><label>نام برند</label><input id="repurposeBrand" type="text" placeholder="Nononick"></div>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="btnRepurpose" onclick="runRepurpose()">بازتولید کن ✦</button>
+    </div>
+
+    <div id="repurposeResults"></div>
+  </div>
+</section>
+
+<!-- ========== CALENDAR ========== -->
+<section id="view-calendar" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">Content Calendar</div>
+      <h1 class="sec-title" style="font-size:26px">تقویم محتوایی هوشمند</h1>
+      <p class="sec-desc">اطلاعات کسب‌وکارت را وارد کن و یک تقویم آماده ۷، ۱۴ یا ۳۰ روزه بگیر.</p>
+    </div>
+
+    <div class="panel" style="margin-bottom:22px">
+      <div class="row2">
+        <div class="field"><label>موضوع کسب‌وکار</label><input id="calBiz" type="text" placeholder="مثلاً: کلینیک دندانپزشکی"></div>
+        <div class="field"><label>صنعت</label>
+          <select id="calIndustry">
+            <option>فروشگاه</option><option>رستوران / کافه</option><option>پزشک / کلینیک</option>
+            <option>آرایشگاه / زیبایی</option><option>باشگاه ورزشی</option><option>املاک</option>
+            <option>وکیل / مشاور حقوقی</option><option>مشاور کسب‌وکار</option><option>فروشگاه اینترنتی</option>
+            <option>استارتاپ / شرکت</option><option>فریلنسر</option><option>معماری / دکوراسیون</option>
+            <option>عکاسی</option><option>طراحی گرافیک</option><option>هتل / گردشگری</option>
+            <option>برند شخصی</option><option>سایر</option>
+          </select>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>مخاطب هدف</label><input id="calAud" type="text" placeholder="مثلاً: خانواده‌ها و جوانان"></div>
+        <div class="field"><label>تعداد روز</label>
+          <select id="calDays"><option value="7">۷ روز</option><option value="14">۱۴ روز</option><option value="30" selected>۳۰ روز</option></select>
+        </div>
+      </div>
+      <div class="field"><label>پست در هفته</label>
+        <select id="calPerWeek"><option>۳</option><option selected>۵</option><option>۷</option></select>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="btnCalendar" onclick="runCalendar()">ساخت تقویم ✦</button>
+    </div>
+
+    <div id="calendarResults"></div>
+  </div>
+</section>
+
+<!-- ========== PROMPT BUILDER ========== -->
+<section id="view-prompt" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">Prompt Builder</div>
+      <h1 class="sec-title" style="font-size:26px">سازنده Prompt حرفه‌ای</h1>
+      <p class="sec-desc">هدف خود را وارد کن و یک Prompt کامل و قابل کپی برای هر ابزار هوش مصنوعی بگیر.</p>
+    </div>
+
+    <div class="studio-grid">
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title"><span class="step-n">۱</span> اطلاعات Prompt</div></div>
+        <div class="field"><label>هدف اصلی</label>
+          <textarea id="pbGoal" placeholder="مثلاً: برای فروشگاه لباس زنانه یک برنامه محتوایی ۳۰ روزه بساز"></textarea>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Role (نقش)</label>
+            <select id="pbRole">
+              <option>Content Strategist</option><option>SEO Expert</option><option>Copywriter</option>
+              <option>Social Media Manager</option><option>Marketing Consultant</option>
+              <option>Brand Storyteller</option><option>Product Marketer</option>
+            </select>
+          </div>
+          <div class="field"><label>Output Format</label>
+            <select id="pbFormat">
+              <option>Markdown</option><option>Plain Text</option><option>Table</option>
+              <option>JSON</option><option>Bullet List</option><option>Numbered List</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Audience</label><input id="pbAud" type="text" placeholder="مثلاً: زنان ۲۰ تا ۴۰ سال"></div>
+          <div class="field"><label>Tone</label>
+            <select id="pbTone"><option>حرفه‌ای</option><option>صمیمی</option><option>فروشنده</option><option>آموزشی</option><option>مینیمال</option><option>لوکس</option><option>داستانی</option><option>هیجانی</option></select>
+          </div>
+        </div>
+        <div class="field"><label>Context (زمینه)</label><textarea id="pbContext" placeholder="اطلاعات تکمیلی، برند، محصول، محدودیت‌ها..."></textarea></div>
+        <div class="field"><label>Constraints (محدودیت‌ها)</label><input id="pbConst" type="text" placeholder="مثلاً: بدون کلیشه، حداکثر ۱۰۰۰ کلمه، فارسی روان"></div>
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="buildPrompt()">ساخت Prompt ✦</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="step-n">۲</span> Prompt نهایی</div>
+          <button class="btn btn-sm btn-primary" onclick="copyPrompt()">COPY PROMPT</button>
+        </div>
+        <div class="prompt-out" id="promptOut">هنوز Prompt ساخته نشده. فرم را پر کن و روی «ساخت Prompt» بزن.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOCAL SEO ========== -->
+<section id="view-local" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">Local SEO</div>
+      <h1 class="sec-title" style="font-size:26px">محتوای محلی</h1>
+      <p class="sec-desc">خدمت و شهر خود را وارد کن؛ محتوای محلی طبیعی، بدون Keyword Stuffing بگیر.</p>
+    </div>
+
+    <div class="studio-grid">
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title"><span class="step-n">۱</span> اطلاعات محلی</div></div>
+        <div class="field"><label>خدمت / محصول</label><input id="locService" type="text" placeholder="مثلاً: طراحی سایت"></div>
+        <div class="field"><label>شهر</label><input id="locCity" type="text" placeholder="مثلاً: اندیمشک"></div>
+        <div class="field"><label>نام کسب‌وکار</label><input id="locBrand" type="text" placeholder="Nononick"></div>
+        <div class="field"><label>مخاطب</label><input id="locAud" type="text" placeholder="مثلاً: صاحبان کسب‌وکار محلی"></div>
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="btnLocal" onclick="runLocal()">تولید محتوای محلی ✦</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="step-n">۲</span> خروجی</div>
+          <button class="tbtn" onclick="copyLocalResult()">📋 کپی</button>
+        </div>
+        <div id="localOutputEmpty" class="output-empty"><div><div class="big">📍</div><div>محتوای محلی اینجا ساخته می‌شود</div></div></div>
+        <div id="localOutputBox" class="hidden">
+          <div class="editor-body" id="localEditorBody" style="max-height:600px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TOOLS LIBRARY ========== -->
+<section id="view-tools" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px">
+      <div class="sec-eyebrow">Free Tools</div>
+      <h1 class="sec-title" style="font-size:26px">کتابخانه ابزارهای رایگان</h1>
+      <p class="sec-desc">۱۶ ابزار کاربردی، همه رایگان و بدون نیاز به ثبت‌نام.</p>
+    </div>
+    <div id="toolsList"></div>
+  </div>
+</section>
+
+<!-- ========== HISTORY ========== -->
+<section id="view-history" class="view hidden">
+  <div class="wrap" style="padding-top:34px">
+    <div style="margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+      <div>
+        <div class="sec-eyebrow">History</div>
+        <h1 class="sec-title" style="font-size:26px">تاریخچه محتوا</h1>
+        <p class="sec-desc">همه خروجی‌های شما در مرورگر خودتان ذخیره می‌شوند.</p>
+      </div>
+      <button class="btn btn-sm btn-danger" onclick="clearHistory()">🗑 پاک کردن همه</button>
+    </div>
+    <div id="historyList"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo"><span class="logo-mark">N</span><span>Nononick<small>Content Studio</small></span></div>
+        <p>Nononick مجموعه‌ای از ابزارهای دیجیتال برای ساخت، مدیریت و رشد حضور آنلاین کسب‌وکارهاست.</p>
+        <a href="#studio" class="btn btn-primary btn-sm mt-20" onclick="nav('studio');return false">شروع رایگان ✦</a>
+      </div>
+      <div class="foot-col">
+        <h5>Content Studio</h5>
+        <a href="#studio" onclick="nav('studio');return false">استودیو محتوا</a>
+        <a href="#seo" onclick="nav('seo');return false">ابزار سئو</a>
+        <a href="#repurpose" onclick="nav('repurpose');return false">بازتولید محتوا</a>
+        <a href="#calendar" onclick="nav('calendar');return false">تقویم محتوایی</a>
+      </div>
+      <div class="foot-col">
+        <h5>Free Tools</h5>
+        <a href="#tools" onclick="nav('tools');return false">همه ابزارها</a>
+        <a href="#tools" onclick="nav('tools');return false">شمارنده کلمات</a>
+        <a href="#tools" onclick="nav('tools');return false">تولید عنوان</a>
+        <a href="#tools" onclick="nav('tools');return false">Meta Description</a>
+      </div>
+      <div class="foot-col">
+        <h5>Nononick</h5>
+        <a href="/services.php">خدمات</a>
+        <a href="/portfolio.php">نمونه‌کارها</a>
+        <a href="/blog.php">وبلاگ</a>
+        <a href="/contact.php">تماس با ما</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Nononick — همه حقوق محفوظ است.</span>
+      <span>ساخته‌شده با ❤️ برای تولیدکنندگان محتوا</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<!-- Tool modal -->
+<div class="modal" id="toolModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3 id="modalTitle">ابزار</h3>
+      <button class="icon-btn" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Server modal -->
+<div class="modal" id="serverModal" onclick="if(event.target===this)closeServerPanel()">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>⚙️ تنظیمات سرور هوش مصنوعی</h3>
+      <button class="icon-btn" onclick="closeServerPanel()">✕</button>
+    </div>
+    <div id="serverModalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   Nononick Content Studio — Core JS
+   با سرور هوش مصنوعی + ۴ ارائه‌دهنده رایگان
+   ============================================================ */
+
+'use strict';
+
+/* ============================================================
+   1. UTILS
+   ============================================================ */
+const Utils = {
+  $(s, r = document) { return r.querySelector(s); },
+  $$(s, r = document) { return Array.from(r.querySelectorAll(s)); },
+  escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  },
+  async copy(text) {
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch (e) { return false; }
+  },
+  slugify(s) {
+    const map = {'ا':'a','ب':'b','پ':'p','ت':'t','ث':'s','ج':'j','چ':'ch','ح':'h','خ':'kh','د':'d','ذ':'z','ر':'r','ز':'z','ژ':'zh','س':'s','ش':'sh','ص':'s','ض':'z','ط':'t','ظ':'z','ع':'a','غ':'gh','ف':'f','ق':'gh','ک':'k','گ':'g','ل':'l','م':'m','ن':'n','و':'v','ه':'h','ی':'y','آ':'a','ئ':'y','ء':''};
+    return s.split('').map(c => map[c] !== undefined ? map[c] : c)
+      .join('').toLowerCase().replace(/[^a-z0-9\s-]/g, '')
+      .trim().replace(/\s+/g, '-').replace(/-+/g, '-');
+  },
+  download(content, name, type) {
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = name; a.click();
+    URL.revokeObjectURL(url);
+  }
+};
+
+function toast(msg, isError) {
+  const wrap = document.getElementById('toasts');
+  const el = document.createElement('div');
+  el.className = 'toast' + (isError ? ' error' : '');
+  el.innerHTML = `<span class="tick ${isError?'err':''}">${isError ? '⚠' : '✦'}</span> ${Utils.escapeHtml(msg)}`;
+  wrap.appendChild(el);
+  setTimeout(() => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(10px)';
+    setTimeout(() => el.remove(), 300);
+  }, 3000);
+}
+
+function escapeHtml(s) { return Utils.escapeHtml(s); }
+function slugify(s) { return Utils.slugify(s); }
+
+/* ============================================================
+   2. PROVIDERS
+   ============================================================ */
+const Providers = {
+  groq: {
+    id: 'groq', name: 'Groq', icon: '⚡',
+    keyEnv: 'GROQ_KEY',
+    models: ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant', 'mixtral-8x7b-32768'],
+    defaultModel: 'llama-3.3-70b-versatile',
+    keyUrl: 'https://console.groq.com/keys',
+    desc: 'سریع‌ترین inference. ۱۰۰۰ درخواست در روز رایگان.',
+    badge: 'رایگان · سریع'
+  },
+  gemini: {
+    id: 'gemini', name: 'Google Gemini', icon: '🔷',
+    keyEnv: 'GEMINI_KEY',
+    models: ['gemini-2.0-flash-exp', 'gemini-1.5-flash'],
+    defaultModel: 'gemini-2.0-flash-exp',
+    keyUrl: 'https://aistudio.google.com/apikey',
+    desc: 'مدل‌های قدرتمند Google. ۱۵۰۰ درخواست در روز رایگان.',
+    badge: 'رایگان · context بلند'
+  },
+  openrouter: {
+    id: 'openrouter', name: 'OpenRouter', icon: '🌐',
+    keyEnv: 'OPENROUTER_KEY',
+    models: ['openrouter/free', 'meta-llama/llama-3.3-70b-instruct:free'],
+    defaultModel: 'openrouter/free',
+    keyUrl: 'https://openrouter.ai/keys',
+    desc: 'دسترسی به ۲۵+ مدل رایگان با یک کلید.',
+    badge: 'رایگان · تنوع مدل'
+  },
+  cerebras: {
+    id: 'cerebras', name: 'Cerebras', icon: '🧠',
+    keyEnv: 'CEREBRAS_KEY',
+    models: ['llama-3.3-70b', 'llama3.1-8b'],
+    defaultModel: 'llama-3.3-70b',
+    keyUrl: 'https://cloud.cerebras.ai',
+    desc: '۱ میلیون توکن رایگان در روز.',
+    badge: 'رایگان · حجم بالا'
+  },
+  get(id) { return this[id] || this.groq; },
+  all() { return [this.groq, this.gemini, this.openrouter, this.cerebras]; }
+};
+
+/* ============================================================
+   3. STORAGE
+   ============================================================ */
+const Storage = {
+  KEY: 'nononick_studio_v1',
+  load() {
+    try { const r = localStorage.getItem(this.KEY); return r ? JSON.parse(r) : {}; }
+    catch (e) { return {}; }
+  },
+  save(data) {
+    try { localStorage.setItem(this.KEY, JSON.stringify(data)); }
+    catch (e) {}
+  }
+};
+
+/* ============================================================
+   4. WORKER CODE
+   ============================================================ */
+const WorkerCode = {
+  generate() {
+    return `const PROVIDERS = {
+  groq: { url: 'https://api.groq.com/openai/v1/chat/completions', keyEnv: 'GROQ_KEY', auth: (k) => ({ 'Authorization': 'Bearer ' + k }) },
+  openrouter: { url: 'https://openrouter.ai/api/v1/chat/completions', keyEnv: 'OPENROUTER_KEY', auth: (k) => ({ 'Authorization': 'Bearer ' + k, 'HTTP-Referer': 'https://nononick.com', 'X-Title': 'Nononick Studio' }) },
+  cerebras: { url: 'https://api.cerebras.ai/v1/chat/completions', keyEnv: 'CEREBRAS_KEY', auth: (k) => ({ 'Authorization': 'Bearer ' + k }) }
+};
+const CORS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Max-Age': '86400'
+};
+export default {
+  async fetch(request, env) {
+    if (request.method === 'OPTIONS') return new Response(null, { headers: CORS });
+    const url = new URL(request.url);
+    if (url.pathname === '/health' || request.method === 'GET') {
+      return json({ status: 'ok', name: 'Nononick AI Server', time: new Date().toISOString() });
+    }
+    if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
+    let body;
+    try { body = await request.json(); }
+    catch (e) { return json({ error: 'Invalid JSON' }, 400); }
+    const { provider = 'groq', model, messages, temperature = 0.7, apiKey } = body;
+    if (!messages || !Array.isArray(messages)) return json({ error: 'messages required' }, 400);
+    try {
+      if (provider === 'gemini') {
+        const key = apiKey || env.GEMINI_KEY;
+        if (!key) return json({ error: 'GEMINI_KEY not set' }, 400);
+        const mdl = model || 'gemini-2.0-flash-exp';
+        const u = 'https://generativelanguage.googleapis.com/v1beta/models/' + mdl + ':generateContent?key=' + encodeURIComponent(key);
+        const sys = messages.filter(m => m.role === 'system').map(m => m.content).join('\\n\\n');
+        const usr = messages.filter(m => m.role !== 'system').map(m => m.content).join('\\n\\n');
+        const full = (sys ? sys + '\\n\\n---\\n\\n' : '') + usr;
+        const r = await fetch(u, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: [{ parts: [{ text: full }] }], generationConfig: { temperature, maxOutputTokens: 4096 } })
+        });
+        const d = await r.json();
+        const txt = d?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        return json({ choices: [{ message: { role: 'assistant', content: txt } }] });
+      }
+      const cfg = PROVIDERS[provider];
+      if (!cfg) return json({ error: 'Unknown provider: ' + provider }, 400);
+      const key = apiKey || env[cfg.keyEnv];
+      if (!key) return json({ error: cfg.keyEnv + ' not set' }, 400);
+      const r = await fetch(cfg.url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...cfg.auth(key) },
+        body: JSON.stringify({ model, messages, temperature, max_tokens: 4096 })
+      });
+      const text = await r.text();
+      return new Response(text, { status: r.status, headers: { 'Content-Type': 'application/json', ...CORS } });
+    } catch (err) { return json({ error: err.message || String(err) }, 500); }
+  }
+};
+function json(obj, status = 200) {
+  return new Response(JSON.stringify(obj), { status, headers: { 'Content-Type': 'application/json', ...CORS } });
+}`;
+  }
+};
+
+/* ============================================================
+   5. CLOUDFLARE API
+   ============================================================ */
+const CloudflareAPI = {
+  BASE: 'https://api.cloudflare.com/client/v4',
+  async request(path, options = {}, token) {
+    const res = await fetch(this.BASE + path, {
+      ...options,
+      headers: { 'Authorization': 'Bearer ' + token, ...(options.headers || {}) }
+    });
+    let data;
+    try { data = await res.json(); }
+    catch (e) { throw new Error('HTTP ' + res.status); }
+    if (!data.success) {
+      const errs = (data.errors || []).map(e => e.message || JSON.stringify(e)).join(' | ');
+      throw new Error(errs || 'Cloudflare error HTTP ' + res.status);
+    }
+    return data.result;
+  },
+  getAccount(token, accountId) { return this.request('/accounts/' + accountId, {}, token); },
+  async getSubdomain(token, accountId) {
+    try { const r = await this.request('/accounts/' + accountId + '/workers/subdomain', {}, token); return r?.subdomain || null; }
+    catch (e) { return null; }
+  },
+  deployWorker(token, accountId, name, code) {
+    const form = new FormData();
+    form.append('metadata', new Blob([JSON.stringify({ main_module: 'worker.js', compatibility_date: '2024-01-01' })], { type: 'application/json' }));
+    form.append('worker.js', new Blob([code], { type: 'application/javascript+module' }), 'worker.js');
+    return this.request('/accounts/' + accountId + '/workers/scripts/' + name, { method: 'PUT', body: form }, token);
+  },
+  enableSubdomain(token, accountId, name) {
+    return this.request('/accounts/' + accountId + '/workers/scripts/' + name + '/subdomain', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ enabled: true, previews_enabled: true })
+    }, token);
+  },
+  async testWorker(url, provider, apiKey) {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ provider, messages: [{ role: 'user', content: 'فقط بنویس: اتصال برقرار است' }], apiKey })
+    });
+    if (!res.ok) {
+      const t = await res.text().catch(() => '');
+      throw new Error('HTTP ' + res.status + (t ? ' — ' + t.slice(0, 150) : ''));
+    }
+    const data = await res.json();
+    return data?.choices?.[0]?.message?.content || '';
+  }
+};
+
+/* ============================================================
+   6. STATE
+   ============================================================ */
+const State = {
+  view: 'home',
+  contentType: 'blog',
+  formData: {},
+  output: '',
+  outputType: '',
+  history: [],
+  modalTool: null,
+
+  // Config سرور
+  config: {
+    serverUrl: null,
+    serverName: null,
+    subdomain: null,
+    accountId: null,
+    createdAt: null,
+    provider: 'groq',
+    apiKeys: {}
+  },
+
+  loadConfig() {
+    const d = Storage.load();
+    Object.assign(this.config, d.config || {});
+  },
+  saveConfig() {
+    Storage.save({ config: this.config });
+  },
+  hasServer() { return !!this.config.serverUrl; },
+  apiKey() { return this.config.apiKeys[this.config.provider] || ''; }
+};
+
+/* ============================================================
+   7. CONTENT TYPES
+   ============================================================ */
+const TONES = ['رسمی','صمیمی','فروشنده','آموزشی','مینیمال','لوکس','داستانی','هیجانی','طنز','تخصصی','خودمانی'];
+const LENGTHS = ['کوتاه','متوسط','بلند','خیلی بلند'];
+
+const F = {
+  topic:    {k:'topic',   label:'موضوع',            type:'text',  ph:'مثلاً: آموزش طراحی سایت', req:true},
+  keyword:  {k:'keyword', label:'کلمه کلیدی اصلی',   type:'text',  ph:'مثلاً: طراحی سایت'},
+  keywords2:{k:'keywords2',label:'کلمات کلیدی فرعی', type:'text',  ph:'با کاما جدا کنید'},
+  audience: {k:'audience',label:'مخاطب',            type:'text',  ph:'مثلاً: صاحبان کسب‌وکار'},
+  city:     {k:'city',    label:'کشور / شهر',        type:'text',  ph:'مثلاً: اندیمشک'},
+  goal:     {k:'goal',    label:'هدف محتوا',         type:'text',  ph:'مثلاً: افزایش فروش'},
+  brand:    {k:'brand',   label:'نام برند',          type:'text',  ph:'Nononick'},
+  website:  {k:'website', label:'وب‌سایت',           type:'text',  ph:'https://...'},
+  cta:      {k:'cta',     label:'CTA',              type:'text',  ph:'مثلاً: همین حالا شروع کنید'},
+  platform: {k:'platform',label:'پلتفرم',            type:'text',  ph:'اینستاگرام، لینکدین، X...'},
+  product:  {k:'product', label:'نام محصول / خدمت',  type:'text',  ph:'مثلاً: قهوه اسپشیالتی'},
+  features: {k:'features',label:'ویژگی‌ها',          type:'textarea',ph:'هر ویژگی در یک خط'},
+  extra:    {k:'extra',   label:'اطلاعات یا متن اولیه',type:'textarea',ph:'هر توضیح، داده یا متن که کمک کند'},
+  tone:     {k:'tone',    label:'لحن',              type:'pills', opts:TONES, def:'صمیمی'},
+  length:   {k:'length',  label:'طول',              type:'pills', opts:LENGTHS, def:'متوسط'},
+  lang:     {k:'lang',    label:'زبان خروجی',        type:'pills', opts:['فارسی','انگلیسی','عربی','ترکی'], def:'فارسی'}
+};
+
+const CONTENT_TYPES = [
+  {id:'blog',      n:'مقاله وبلاگ',        ico:'✍️', cat:'نوشتن', desc:'مقاله کامل و ساختارمند', f:['topic','keyword','keywords2','audience','city','goal','tone','length','brand','website','cta','extra']},
+  {id:'seo-article',n:'مقاله سئو',         ico:'🔍', cat:'نوشتن', desc:'مقاله بهینه برای گوگل', f:['topic','keyword','keywords2','audience','city','tone','length','brand','cta','extra']},
+  {id:'title',     n:'عنوان مقاله',         ico:'🏷️', cat:'نوشتن', desc:'۱۰ عنوان جذاب', f:['topic','keyword','audience','tone']},
+  {id:'meta',      n:'توضیحات متا',         ico:'📝', cat:'سئو', desc:'Meta Description بهینه', f:['topic','keyword','audience','cta']},
+  {id:'instagram', n:'کپشن اینستاگرام',     ico:'📸', cat:'شبکه‌های اجتماعی', desc:'کپشن با هشتگ', f:['topic','audience','tone','brand','cta','extra']},
+  {id:'linkedin',  n:'پست لینکدین',         ico:'💼', cat:'شبکه‌های اجتماعی', desc:'پست حرفه‌ای لینکدین', f:['topic','audience','tone','brand','cta','extra']},
+  {id:'x',         n:'پست X (توییتر)',      ico:'🐦', cat:'شبکه‌های اجتماعی', desc:'پست کوتاه X', f:['topic','audience','tone','cta']},
+  {id:'reels',     n:'سناریوی Reels',       ico:'🎬', cat:'ویدیو', desc:'سناریوی ریلز اینستاگرام', f:['topic','audience','tone','length','cta','extra']},
+  {id:'youtube',   n:'سناریوی YouTube',     ico:'▶️', cat:'ویدیو', desc:'سناریو کامل یوتیوب', f:['topic','audience','tone','length','cta','extra']},
+  {id:'video',     n:'سناریوی ویدیو',       ico:'🎥', cat:'ویدیو', desc:'سناریوی عمومی ویدیو', f:['topic','audience','tone','length','cta','extra']},
+  {id:'idea',      n:'ایده برای محتوا',      ico:'💡', cat:'ایده و برنامه', desc:'لیست ایده‌های تازه', f:['topic','audience','brand']},
+  {id:'calendar',  n:'تقویم محتوایی',        ico:'📅', cat:'ایده و برنامه', desc:'برنامه محتوایی چند روزه', f:['topic','audience','brand']},
+  {id:'product-desc',n:'توضیحات محصول',     ico:'🛍️', cat:'فروش', desc:'توضیح جذاب محصول', f:['product','features','audience','tone','brand','cta']},
+  {id:'product-page',n:'متن صفحه محصول',    ico:'📄', cat:'فروش', desc:'متن کامل صفحه محصول', f:['product','features','audience','tone','brand','cta','extra']},
+  {id:'landing',   n:'متن لندینگ پیج',      ico:'🎯', cat:'فروش', desc:'متن کامل Landing Page', f:['topic','audience','tone','brand','cta','extra']},
+  {id:'ad',        n:'متن تبلیغاتی',         ico:'📣', cat:'فروش', desc:'Ad Copy برای تبلیغات', f:['topic','audience','tone','cta','platform']},
+  {id:'email',     n:'ایمیل',               ico:'✉️', cat:'فروش', desc:'ایمیل بازاریابی یا اطلاع‌رسانی', f:['topic','audience','tone','brand','cta','extra']},
+  {id:'sales-msg', n:'پیام تبلیغاتی',       ico:'💬', cat:'فروش', desc:'پیام خصوصی فروش', f:['topic','audience','tone','cta']},
+  {id:'biz-intro', n:'معرفی کسب‌وکار',      ico:'🏢', cat:'کسب‌وکار', desc:'معرفی کوتاه و جذاب', f:['topic','audience','tone','brand','city','extra']},
+  {id:'bio',       n:'بیو اینستاگرام',      ico:'👤', cat:'کسب‌وکار', desc:'بیوی جذاب و حرفه‌ای', f:['topic','brand','audience','tone','city','cta']},
+  {id:'faq',       n:'FAQ',                ico:'❓', cat:'نوشتن', desc:'سوالات متداول', f:['topic','audience','keyword']},
+  {id:'qa',        n:'پرسش و پاسخ',         ico:'💭', cat:'نوشتن', desc:'پرسش و پاسخ کوتاه', f:['topic','audience','keyword']},
+  {id:'headlines', n:'عنوان‌های جذاب',       ico:'⚡', cat:'نوشتن', desc:'۲۰ تیتر قدرتمند', f:['topic','audience','tone']},
+  {id:'hooks',     n:'Hook / قلاب محتوا',    ico:'🪝', cat:'شبکه‌های اجتماعی', desc:'۱۰ قلاب برای شروع', f:['topic','audience','tone']},
+  {id:'cta-gen',   n:'Call To Action',      ico:'👉', cat:'فروش', desc:'CTA های اثرگذار', f:['topic','audience','tone']},
+  {id:'sales',     n:'متن فروش',            ico:'💰', cat:'فروش', desc:'متن کامل فروش (Sales Copy)', f:['topic','audience','tone','brand','cta','extra']},
+  {id:'rewrite',   n:'بازنویسی متن',         ico:'♻️', cat:'بازنویسی', desc:'بازنویسی روان و متفاوت', f:['extra','tone','length']},
+  {id:'summarize', n:'خلاصه‌سازی',           ico:'📌', cat:'بازنویسی', desc:'خلاصه‌ای از متن بلند', f:['extra','length']},
+  {id:'tone-shift',n:'تبدیل لحن',           ico:'🎭', cat:'بازنویسی', desc:'تغییر لحن متن', f:['extra','tone']},
+  {id:'translate', n:'ترجمه',               ico:'🌐', cat:'بازنویسی', desc:'ترجمه روان', f:['extra','lang']},
+  {id:'expand',    n:'گسترش متن',           ico:'➕', cat:'بازنویسی', desc:'بلندتر و کامل‌تر', f:['extra','tone']},
+  {id:'shorten',   n:'کوتاه‌کردن متن',       ico:'➖', cat:'بازنویسی', desc:'متن فشرده و مفید', f:['extra','length']},
+  {id:'art-to-post',n:'مقاله → پست شبکه اجتماعی', ico:'🔄', cat:'تبدیل', desc:'از مقاله، پست بساز', f:['extra','brand','tone']},
+  {id:'art-to-video',n:'مقاله → سناریوی ویدیو', ico:'🎞️', cat:'تبدیل', desc:'از مقاله، سناریو بساز', f:['extra','tone','length']},
+  {id:'local',     n:'محتوای محلی',          ico:'📍', cat:'محلی', desc:'محتوای مخصوص شهر', f:['topic','city','audience','brand','cta']},
+  {id:'industry',  n:'محتوای تخصصی صنعت',    ico:'🏭', cat:'محلی', desc:'محتوای مخصوص صنعت', f:['topic','audience','tone','brand','cta','extra']}
+];
+
+/* ============================================================
+   8. PROMPTS — سازنده Prompt هوش مصنوعی
+   ============================================================ */
+const Prompts = {
+  system: 'You are a professional content writer and SEO expert. Always respond in Persian (فارسی) with natural, fluent, marketing-quality text. Never use Lorem ipsum or filler. Output should be immediately publishable and formatted in Markdown.',
+
+  build(typeId, data, typeName) {
+    const lines = [`نوع محتوا: ${typeName}`];
+    const map = {
+      topic:'موضوع', keyword:'کلمه کلیدی اصلی', keywords2:'کلمات کلیدی فرعی',
+      audience:'مخاطب', city:'شهر', goal:'هدف', brand:'نام برند',
+      cta:'CTA', platform:'پلتفرم', product:'نام محصول',
+      features:'ویژگی‌ها', extra:'اطلاعات اولیه', tone:'لحن', length:'طول', lang:'زبان خروجی'
+    };
+    for (const [k, v] of Object.entries(data)) {
+      if (v && String(v).trim()) lines.push(`${map[k] || k}: ${v}`);
+    }
+
+    const guides = {
+      blog: 'یک مقاله وبلاگ کامل با مقدمه، حداقل ۵ سرتیتر H2، نتیجه‌گیری و CTA بنویس. عمق محتوا حداقل ۸۰۰ کلمه باشد.',
+      'seo-article': 'یک مقاله سئو شده کامل بنویس. کلمه کلیدی را به‌طور طبیعی در عنوان، مقدمه، سرتیترها و بدنه به کار ببر. ساختار H1/H2/H3 داشته باشد. از keyword stuffing پرهیز کن.',
+      title: '۱۰ عنوان جذاب و سئوپسند، هر کدام در یک خط شماره‌دار.',
+      meta: 'سه نسخه Meta Description (هرکدام ۱۲۰–۱۵۵ کاراکتر) با ذکر طول.',
+      instagram: 'یک کپشن جذاب با ایموجی، خطوط کوتاه، و ۱۰–۱۵ هشتگ مرتبط.',
+      linkedin: 'یک پست حرفه‌ای لینکدین با شروع قوی، بدنه ارزشمند و پایان تعاملی.',
+      x: 'یک رشته‌پست ۵ تا ۷ توییتی شماره‌گذاری‌شده.',
+      reels: 'سناریوی کامل Reels با ساختار: HOOK (۰–۳ث) + مشکل + راه‌حل + CTA + نکات تصویری.',
+      youtube: 'سناریوی YouTube با عنوان، توضیحات، تایم‌لاین و اسکریپت کامل.',
+      video: 'سناریوی ویدیو با ساختار و بخش‌بندی زمانی.',
+      idea: '۱۵ ایده تازه و خلاقانه، هر کدام در یک خط.',
+      calendar: 'یک تقویم محتوایی ۷ روزه با ستون‌های روز، نوع محتوا، موضوع، هوک و CTA.',
+      'product-desc': 'توضیح محصول جذاب با مزایا، مشخصات و CTA.',
+      'product-page': 'متن کامل صفحه محصول شامل معرفی، ویژگی‌ها، نظرات، سوالات متداول و CTA.',
+      landing: 'متن کامل یک لندینگ پیج با ساختار: مشکل، راه‌حل، مزایا، اثبات اجتماعی، سوالات، CTA.',
+      ad: '۵ نسخه متن تبلیغاتی کوتاه و مؤثر با رویکردهای مختلف.',
+      email: 'یک ایمیل بازاریابی کامل با موضوع، بدنه و CTA.',
+      'sales-msg': 'یک پیام تبلیغاتی کوتاه و مؤثر برای دایرکت/واتساپ.',
+      'biz-intro': 'یک معرفی کوتاه، حرفه‌ای و جذاب از کسب‌وکار.',
+      bio: '۵ نسخه بیو اینستاگرام کوتاه و جذاب (هر کدام زیر ۱۵۰ کاراکتر).',
+      faq: '۸ سوال متداول با پاسخ‌های کوتاه و مفید.',
+      qa: '۸ پرسش و پاسخ کوتاه و کاربردی.',
+      headlines: '۲۰ تیتر قدرتمند و کنجکاوی‌برانگیز، هر کدام در یک خط.',
+      hooks: '۱۰ هوک (قلاب) قوی برای شروع محتوا، هر کدام در یک خط.',
+      'cta-gen': '۱۰ CTA اثرگذار و متفاوت.',
+      sales: 'یک متن فروش کامل با ساختار: درد، تشدید، راه‌حل، مزایا، اثبات، CTA.',
+      rewrite: 'متن زیر را کامل بازنویسی کن. معنا را حفظ کن اما ساختار و کلمات را تغییر بده:\n\n' + (data.extra || ''),
+      summarize: 'متن زیر را در حداکثر ۵ نکته کلیدی خلاصه کن:\n\n' + (data.extra || ''),
+      'tone-shift': 'متن زیر را با لحن مشخص‌شده بازنویسی کن:\n\n' + (data.extra || ''),
+      translate: 'متن زیر را به زبان مقصد ترجمه کن و روان و طبیعی ارائه بده:\n\n' + (data.extra || ''),
+      expand: 'متن زیر را گسترش بده، مثال اضافه کن و کامل‌تر کن:\n\n' + (data.extra || ''),
+      shorten: 'متن زیر را کوتاه‌تر و فشرده‌تر کن، نکات کلیدی را حفظ کن:\n\n' + (data.extra || ''),
+      'art-to-post': 'متن زیر را به کپشن Instagram، پست LinkedIn و پست X تبدیل کن:\n\n' + (data.extra || ''),
+      'art-to-video': 'متن زیر را به یک سناریوی ویدیوی ۲ دقیقه‌ای تبدیل کن:\n\n' + (data.extra || ''),
+      local: 'محتوای محلی (شهر مشخص‌شده) با مقاله، FAQ، Meta Description، Local Keywords و CTA بنویس. بدون keyword stuffing.',
+      industry: 'محتوای تخصصی صنعت با نکات کاربردی، اشتباهات رایج و CTA بنویس.'
+    };
+
+    if (guides[typeId]) lines.push('', 'دستورالعمل:', guides[typeId]);
+    lines.push('', 'خروجی را با Markdown و آماده انتشار بنویس.');
+    return lines.join('\n');
+  },
+
+  seo(data) {
+    return `یک پکیج کامل SEO برای موضوع زیر بساز. خروجی را دقیقاً با این ساختار و با Markdown بنویس:
+
+# 📦 پکیج کامل سئو — ${data.topic}
+
+## 🏷 SEO Title
+(یک عنوان سئو شده ۵۰–۶۰ کاراکتری)
+
+## 📝 Meta Description
+(۱۲۰–۱۵۵ کاراکتر)
+
+## 🔗 Slug
+(فقط حروف انگلیسی با خط تیره)
+
+## 📰 H1
+## 📑 H2 (۵ سرفصل)
+## 📄 H3 (۴ سرفصل)
+
+## 📖 مقاله کامل
+(یک مقاله ۸۰۰+ کلمه‌ای با ساختار Markdown و سرفصل‌ها)
+
+## ❓ FAQ
+(۵ سوال با پاسخ کوتاه)
+
+## 🧩 FAQ Schema (JSON-LD)
+(کد JSON-LD کامل و معتبر)
+
+## 🔑 کلمات کلیدی مرتبط
+(۱۰ کلمه)
+
+## 🎯 Search Intent
+(Informational / Commercial / Transactional / Navigational)
+
+## 👉 CTA
+
+## 🔗 پیشنهاد Internal Link
+(۳ لینک داخلی)
+
+## 🌐 پیشنهاد External Link
+(۲ لینک خارجی معتبر)
+
+## 📱 Open Graph Title
+## 📱 Open Graph Description
+## 🖼 Image Alt Text
+
+اطلاعات:
+- موضوع: ${data.topic}
+- کلمه کلیدی اصلی: ${data.keyword}
+- کلمات کلیدی فرعی: ${data.keywords2 || '—'}
+- مخاطب: ${data.audience || 'مخاطبان'}
+- شهر/کشور: ${data.city || '—'}
+- برند: ${data.brand || 'Nononick'}
+- CTA: ${data.cta || 'همین حالا شروع کنید'}`;
+  },
+
+  local(data) {
+    return `یک پکیج محتوای محلی (Local SEO) برای خدمت زیر بساز:
+
+- خدمت: ${data.service}
+- شهر: ${data.city}
+- کسب‌وکار: ${data.brand}
+- مخاطب: ${data.audience}
+
+خروجی را با این ساختار Markdown بده:
+# ${data.service} در ${data.city}
+## خدمات
+## چرا ما
+## سوالات متداول
+## 📍 Google Business Profile Post
+## 🔑 Local Keywords (۸ کلمه)
+## 📝 Meta Description
+## 👉 CTA
+
+بدون keyword stuffing، طبیعی و حرفه‌ای.`;
+  },
+
+  repurpose(block, src, topic, brand) {
+    const templates = {
+      instagram: `۵ کپشن اینستاگرام جذاب و متفاوت از متن زیر بساز. هر کپشن با ایموجی، خطوط کوتاه و ۱۰ هشتگ مرتبط. با "## کپشن ۱" تا "## کپشن ۵" جدا کن.\n\nموضوع: ${topic}\nبرند: ${brand}\n\nمتن:\n${src.slice(0, 3000)}`,
+      linkedin: `۳ پست حرفه‌ای لینکدین از متن زیر بساز. هر پست با شروع قوی، بدنه ارزشمند و پایان تعاملی. با "## پست ۱" تا "## پست ۳" جدا کن.\n\nموضوع: ${topic}\nبرند: ${brand}\n\nمتن:\n${src.slice(0, 3000)}`,
+      x: `۵ توییت مستقل از متن زیر بساز. هر کدام حداکثر ۲۸۰ کاراکتر.\n\nموضوع: ${topic}\n\nمتن:\n${src.slice(0, 2000)}`,
+      reels: `سناریوی کامل Reels ۳۰ ثانیه‌ای از متن زیر بساز. ساختار: HOOK + بدنه + CTA + نکات تصویری.\n\nموضوع: ${topic}\n\nمتن:\n${src.slice(0, 2500)}`,
+      youtube: `سناریوی کامل YouTube از متن زیر بساز. شامل عنوان، توضیحات، تایم‌لاین و اسکریپت.\n\nموضوع: ${topic}\n\nمتن:\n${src.slice(0, 2500)}`,
+      hooks: `۱۰ هوک قوی و کنجکاوی‌برانگیز برای موضوع "${topic}" بنویس. هر کدام در یک خط شماره‌دار.`,
+      titles: `۱۰ عنوان جذاب و سئوپسند برای موضوع "${topic}" بنویس. هر کدام در یک خط شماره‌دار.`,
+      ctas: `۵ CTA اثرگذار و متفاوت برای موضوع "${topic}" بنویس. هر کدام در یک خط.`,
+      newsletter: `ایمیل خبرنامه کوتاه از متن زیر بساز. شامل موضوع، بدنه و CTA.\n\nموضوع: ${topic}\nبرند: ${brand}\n\nمتن:\n${src.slice(0, 2500)}`
+    };
+    return templates[block] || '';
+  }
+};
+
+/* ============================================================
+   9. MOCK GENERATOR — fallback
+   ============================================================ */
+const G = {};
+
+function base(d) { return {
+  topic: d.topic || 'موضوع انتخابی',
+  kw: d.keyword || d.topic || 'موضوع',
+  kw2: d.keywords2 ? d.keywords2.split(',').map(s => s.trim()).filter(Boolean) : [],
+  aud: d.audience || 'مخاطبان هدف',
+  city: d.city || '',
+  goal: d.goal || '',
+  tone: d.tone || 'صمیمی',
+  len: d.length || 'متوسط',
+  brand: d.brand || 'برند شما',
+  site: d.website || '',
+  cta: d.cta || 'همین حالا شروع کنید',
+  extra: d.extra || '',
+  product: d.product || d.topic || 'محصول',
+  features: d.features ? d.features.split('\n').filter(Boolean) : [],
+  platform: d.platform || 'اینستاگرام'
+}; }
+
+G.blog = d => {
+  const b = base(d);
+  return `# راهنمای کامل ${b.topic}
+
+## مقدمه
+${b.topic} امروزه یکی از مهم‌ترین موضوعات برای ${b.aud} است. در این مقاله به زبان ساده همه چیز را بررسی می‌کنیم.
+
+## ${b.kw} چیست؟
+${b.kw} مجموعه‌ای از اصول و روش‌هاست که به ${b.aud} کمک می‌کند به نتیجه برسند.
+
+## چرا مهم است؟
+- افزایش دیده‌شدن
+- صرفه‌جویی در زمان
+- ایجاد اعتماد در ${b.aud}
+- رشد پایدار
+
+## مزایای کلیدی
+۱. سادگی شروع
+۲. بازدهی سریع
+۳. قابل اندازه‌گیری
+۴. انعطاف‌پذیری
+
+## چطور شروع کنیم؟
+۱. هدف مشخص تعیین کنید
+۲. مخاطب را بشناسید
+۳. شروع کوچک داشته باشید
+۴. نتیجه را بسنجید
+۵. بهبود مستمر
+
+## اشتباهات رایج
+- انتظار نتیجه فوری
+- کپی راهکار دیگران
+- نداشتن شاخص
+- رها کردن در میانه راه
+
+## سوالات متداول
+**${b.kw} چقدر زمان می‌برد؟**
+بسته به هدف، از چند هفته تا چند ماه.
+
+**آیا برای شروع تخصص لازم است؟**
+خیر، با منابع درست از صفر می‌توانید شروع کنید.
+
+## نتیجه‌گیری
+${b.topic} فرصتی واقعی برای ${b.aud} است. مهم این است که شروع کنید و متوقف نشوید.
+
+${b.cta}${b.brand ? '\n\n— ' + b.brand : ''}`;
+};
+G['seo-article'] = G.blog;
+
+G.title = d => {
+  const b = base(d);
+  return `# ۱۰ عنوان جذاب برای «${b.topic}»\n\n` + [
+    `راهنمای کامل ${b.topic} در ${new Date().getFullYear()}`,
+    `${b.kw} : هر آنچه باید بدانید`,
+    `۱۰ نکته کلیدی درباره ${b.topic}`,
+    `چگونه ${b.topic} را حرفه‌ای شروع کنیم؟`,
+    `${b.topic} برای ${b.aud}: راهنمای عملی`,
+    `اشتباهات رایج در ${b.topic}`,
+    `${b.kw} از صفر تا صد`,
+    `چرا ${b.topic} برای ${b.aud} مهم است؟`,
+    `مقایسه روش‌های ${b.topic}`,
+    `۷ ترفند ${b.topic} که متخصص‌ها استفاده می‌کنند`
+  ].map((t, i) => `${i+1}. ${t}`).join('\n');
+};
+
+G.meta = d => {
+  const b = base(d);
+  const m1 = `${b.topic} را با راهنمای کامل ${b.brand} یاد بگیرید. نکات کاربردی برای ${b.aud}.`;
+  const m2 = `همه چیز درباره ${b.kw}: از اصول تا تکنیک‌های پیشرفته.`;
+  const m3 = `${b.cta} — راهنمای کامل ${b.topic}.`;
+  return `# توضیحات متا — ${b.topic}\n\n**نسخه ۱ (${m1.length} کاراکتر)**\n${m1}\n\n**نسخه ۲ (${m2.length} کاراکتر)**\n${m2}\n\n**نسخه ۳ (${m3.length} کاراکتر)**\n${m3}`;
+};
+
+G.instagram = d => {
+  const b = base(d);
+  return `📸 **${b.topic}**\n\n${b.aud} عزیز 👇\n\n✨ چرا مهم است\n✨ چطور شروع کنیم\n✨ چه اشتباهی نکنیم\n\n${b.cta}\n${b.brand ? '— ' + b.brand : ''}\n\n#${b.kw.replace(/\s+/g,'_')} #محتوا #آموزش #کسب_و_کار #اینستاگرام #تولید_محتوا #رشد #بازاریابی`;
+};
+
+G.linkedin = d => {
+  const b = base(d);
+  return `💼 **${b.topic}**\n\n${b.topic} یکی از موضوعات مهم برای ${b.aud} است.\n\nسه عامل کلیدی:\n۱. هدف شفاف\n۲. تمرکز بلندمدت\n۳. اندازه‌گیری مستمر\n\nنظر شما چیست؟\n\n${b.cta}\n${b.brand ? '— ' + b.brand : ''}`;
+};
+
+G.x = d => {
+  const b = base(d);
+  return `🐦 **رشته‌پست X — ${b.topic}**\n\n۱/ ${b.topic} را می‌توان ساده کرد.\n\n۲/ اول بدانید ${b.kw} چیست.\n\n۳/ اشتباه اول: انتظار نتیجه فوری.\n\n۴/ اشتباه دوم: کپی دیگران.\n\n۵/ راه‌حل: تمرکز + اجرا + سنجش.\n\n۶/ ${b.cta}`;
+};
+
+G.reels = d => {
+  const b = base(d);
+  return `🎬 **سناریوی Reels — ${b.topic}**\n\n**۰–۳ ثانیه | HOOK**\n«اگر ${b.aud} هستی، این ۳۰ ثانیه رو از دست نده.»\n\n**۳–۸ ثانیه | مشکل**\n«اکثراً یک چیز رو اشتباه انجام می‌دهند.»\n\n**۸–۲۰ ثانیه | راه‌حل**\n۱. هدف مشخص\n۲. شروع کوچک\n۳. سنجش نتیجه\n\n**۲۷–۳۰ ثانیه | CTA**\n«${b.cta}»`;
+};
+G.youtube = G.reels;
+G.video = G.reels;
+
+G.idea = d => {
+  const b = base(d);
+  return `# 💡 ایده‌های محتوا برای «${b.topic}»\n\n` + [
+    `۱۰ نکته درباره ${b.topic}`,
+    `اشتباهات رایج در ${b.topic}`,
+    `مقایسه دو رویکرد به ${b.kw}`,
+    `پشت صحنه: چطور کار می‌کنیم`,
+    `سوال و جواب با ${b.aud}`,
+    `چک‌لیست کامل ${b.kw}`,
+    `داستان موفقیت یک مشتری`,
+    `ابزارهای ضروری ${b.topic}`,
+    `روندهای آینده`,
+    `۵ دقیقه آموزش سریع`,
+    `مقایسه قبل و بعد`,
+    `چرا اکثر شکست می‌خورند؟`,
+    `راهنمای تصویری`,
+    `پاسخ به ۱۰ سوال پرتکرار`,
+    `چطور در بودجه کم شروع کنیم؟`
+  ].map((x, i) => `${i+1}. ${x}`).join('\n');
+};
+
+G.calendar = d => {
+  const b = base(d);
+  const types = ['مقاله','پست اینستاگرام','ویدیو کوتاه','پست لینکدین','استوری','پادکست کوتاه','ریلز'];
+  return `# 📅 تقویم محتوایی — ${b.topic}\n\n` + Array.from({length:7}, (_,i) => 
+    `**روز ${i+1}** | ${types[i%types.length]} | موضوع: ${b.topic} — بخش ${i+1} | CTA: ${b.cta}`
+  ).join('\n');
+};
+
+G['product-desc'] = d => {
+  const b = base(d);
+  const feats = b.features.length ? b.features : ['کیفیت بالا','قیمت مناسب','ارسال سریع','ضمانت بازگشت'];
+  return `# ${b.product}\n\nانتخابی هوشمندانه برای ${b.aud}.\n\n## چرا این محصول؟\n${feats.map(f => '✅ ' + f).join('\n')}\n\n## مناسب چه کسانی است؟\n${b.aud} که به کیفیت اهمیت می‌دهند.\n\n${b.cta}\n${b.brand ? '— ' + b.brand : ''}`;
+};
+G['product-page'] = G['product-desc'];
+
+G.landing = d => {
+  const b = base(d);
+  return `# ${b.topic}\n\n## ${b.aud} عزیز، این دقیقاً برای شماست\nاگر به دنبال ${b.kw} هستید، جای درستی آمده‌اید.\n\n## مشکل\nاکثر ${b.aud} با چالش‌های مشابه روبرو هستند.\n\n## راه‌حل\nما راهکاری ساده ارائه می‌دهیم.\n\n## مزایا\n✅ صرفه‌جویی در زمان\n✅ نتیجه قابل اندازه‌گیری\n✅ پشتیبانی کامل\n\n## ${b.cta}\n${b.brand ? '— ' + b.brand : ''}`;
+};
+
+G.ad = d => {
+  const b = base(d);
+  return `# 📣 متن تبلیغاتی — ${b.topic}\n\n**پلتفرم:** ${b.platform}\n\n---\n\n**نسخه ۱**\n${b.topic}؟ ${b.cta}\n\n**نسخه ۲**\nاز ${b.topic} خسته شدی؟ راه‌حل ساده است. ${b.cta}\n\n**نسخه ۳**\n${b.topic} حرفه‌ای، بدون دردسر. مخصوص ${b.aud}. ${b.cta}`;
+};
+
+G.email = d => {
+  const b = base(d);
+  return `**موضوع:** ${b.topic} — یک خبر مهم برای شما\n\nسلام،\n\nدرباره ${b.topic} می‌خواستم صحبت کنم.\n\n👉 ${b.cta}\n\nبا احترام،\n${b.brand}`;
+};
+
+G['sales-msg'] = d => {
+  const b = base(d);
+  return `سلام 👋\n\nدیدم به ${b.topic} علاقه داری.\n\n✨ ${b.cta}\n\n— ${b.brand}`;
+};
+
+G['biz-intro'] = d => {
+  const b = base(d);
+  return `# درباره ${b.brand}\n\n${b.brand} فعال در حوزه ${b.topic} برای ${b.aud}${b.city ? ' در ' + b.city : ''}.\n\n## چه می‌کنیم؟\nراهکارهایی ساده و مؤثر برای ${b.aud}.\n\n## ${b.cta}`;
+};
+
+G.bio = d => {
+  const b = base(d);
+  return `👤 **بیو اینستاگرام**\n\n**نسخه ۱**\n${b.topic} ✦\n${b.cta}\n\n**نسخه ۲**\n${b.brand || ''} | ${b.topic}\n${b.aud} → اینجا\n📩 ${b.cta}`;
+};
+
+G.faq = d => {
+  const b = base(d);
+  return `# سوالات متداول — ${b.topic}\n\n**${b.kw} چیست؟**\n${b.kw} مجموعه‌ای از اصول است.\n\n**چرا مهم است؟**\nچون رقابت زیاد است.\n\n**چطور شروع کنم؟**\nبا یک قدم کوچک.`;
+};
+G.qa = G.faq;
+
+G.headlines = d => {
+  const b = base(d);
+  return `# ⚡ ۱۵ تیتر قدرتمند\n\n` + [
+    `آیا ${b.topic} واقعاً کار می‌کند؟`,
+    `${b.topic} در ۵ دقیقه`,
+    `چیزی که درباره ${b.topic} به شما نگفته‌اند`,
+    `راز ${b.topic}`,
+    `${b.topic} برای ${b.aud}`,
+    `چرا ${b.topic} جواب نداده؟`,
+    `۱۰ نکته طلایی ${b.topic}`,
+    `چطور در ۳۰ روز یاد بگیریم`,
+    `${b.topic} مثل حرفه‌ای‌ها`,
+    `اگر فقط یک چیز بدانید...`,
+    `${b.topic} — راهنمای کامل`,
+    `آیا این اشتباه را می‌کنید؟`,
+    `از کجا شروع کنیم؟`,
+    `مقایسه روش‌ها`,
+    `۷ ترفند متخصص‌ها`
+  ].map((t, i) => `${i+1}. ${t}`).join('\n');
+};
+
+G.hooks = d => {
+  const b = base(d);
+  return `# 🪝 ۱۰ Hook\n\n` + [
+    `اگر ${b.aud} هستی، این ۳۰ ثانیه رو از دست نده.`,
+    `هیچ‌کس درباره ${b.topic} اینو بهت نمی‌گه.`,
+    `این اشتباه در ${b.topic} ممکنه همه چیز رو خراب کنه.`,
+    `من مدت‌ها وقت گذاشتم تا اینو بفهمم.`,
+    `اگه فقط یک چیز یاد بگیری، همین باشه.`,
+    `تفاوت موفق و ناموفق چیه؟`,
+    `قبل از شروع، اینو ببین.`,
+    `ساده‌تر از اونیه که فکر می‌کنی.`,
+    `چرا تلاش‌هات نتیجه نمی‌ده؟`,
+    `سه قدم ساده از همین امروز.`
+  ].map((t, i) => `${i+1}. ${t}`).join('\n');
+};
+
+G['cta-gen'] = d => {
+  return `# 👉 ۱۰ CTA\n\n` + ['همین حالا شروع کن','برای مشاوره رایگان تماس بگیر','همین امروز قدم اول را بردار','ثبت‌نام کن و شروع کن','همین حالا سفارش بده','برای اطلاعات بیشتر کلیک کن','فرصت را از دست نده','به ما بپیوند','الان امتحان کن','همین الان اقدام کن'].map((t,i)=>`${i+1}. ${t}`).join('\n');
+};
+
+G.sales = G.landing;
+
+G.rewrite = d => {
+  const b = base(d);
+  const src = b.extra || 'متنی وارد نشده است.';
+  return `# ♻️ بازنویسی\n\n**متن اصلی:**\n${src}\n\n---\n\n**بازنویسی‌شده:**\n${src}`;
+};
+G.summarize = d => {
+  const b = base(d);
+  const src = b.extra || '';
+  return `# 📌 خلاصه\n\n` + src.split(/[.!?؟\n]+/).slice(0, 5).map((s, i) => `${i+1}. ${s.trim()}.`).join('\n');
+};
+G['tone-shift'] = G.rewrite;
+G.translate = G.rewrite;
+G.expand = G.rewrite;
+G.shorten = G.rewrite;
+G['art-to-post'] = G.rewrite;
+G['art-to-video'] = G.rewrite;
+
+G.local = d => {
+  const b = base(d);
+  const city = b.city || 'شهر شما';
+  return `# ${b.topic} در ${city}\n\n## خدمات ${b.topic} در ${city}\nبرای ${b.aud} در ${city}.\n\n## چرا ما؟\n- تجربه محلی\n- قیمت مناسب\n- پشتیبانی\n\n## ${b.cta}`;
+};
+
+G.industry = G.blog;
+
+function generate(type, data) {
+  if (G[type]) return G[type](data);
+  return G.blog(data);
+}
+
+/* ============================================================
+   10. AI CALL
+   ============================================================ */
+async function callAI(userPrompt, systemPrompt) {
+  if (!State.hasServer()) throw new Error('سرور تنظیم نشده');
+  const key = State.apiKey();
+  if (!key) throw new Error('کلید AI تنظیم نشده');
+
+  const res = await fetch(State.config.serverUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      provider: State.config.provider,
+      messages: [
+        { role: 'system', content: systemPrompt || Prompts.system },
+        { role: 'user', content: userPrompt }
+      ],
+      apiKey: key,
+      temperature: 0.7
+    })
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(() => '');
+    throw new Error('HTTP ' + res.status + (txt ? ' — ' + txt.slice(0, 150) : ''));
+  }
+  const data = await res.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text) throw new Error('پاسخ خالی از سرور');
+  return text.trim();
+}
+
+function setBtnLoading(sel, loading, text) {
+  const btn = document.querySelector(sel);
+  if (!btn) return;
+  if (loading) {
+    btn.dataset.original = btn.textContent;
+    btn.disabled = true;
+    btn.innerHTML = `${text || 'در حال پردازش'} <span class="typing"><span></span><span></span><span></span></span>`;
+  } else {
+    btn.disabled = false;
+    if (btn.dataset.original) btn.textContent = btn.dataset.original;
+  }
+}
+
+/* ============================================================
+   11. ROUTER
+   ============================================================ */
+function nav(view, push) {
+  State.view = view;
+  document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+  const el = document.getElementById('view-' + view);
+  if (el) el.classList.remove('hidden');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.dataset.nav === view));
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  if (push !== false) history.replaceState(null, '', '#' + view);
+  document.getElementById('mobileMenu').classList.add('hidden');
+  if (view === 'history') renderHistory();
+  if (view === 'tools') renderTools();
+}
+
+window.addEventListener('hashchange', () => {
+  const h = location.hash.replace('#', '') || 'home';
+  nav(h, false);
+});
+
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+}
+
+/* ============================================================
+   12. SERVER PANEL
+   ============================================================ */
+function updateServerBadge() {
+  const badge = document.getElementById('serverBadge');
+  const txt = document.getElementById('serverBadgeText');
+  if (!badge || !txt) return;
+  if (State.hasServer()) {
+    badge.classList.remove('off');
+    const short = State.config.serverName ? `${State.config.serverName}.${State.config.subdomain}` : 'سرور';
+    txt.textContent = 'سرور: ' + short.slice(0, 20);
+    badge.title = State.config.serverUrl;
+  } else {
+    badge.classList.add('off');
+    txt.textContent = 'سرور: تنظیم نشده';
+  }
+}
+
+function renderHomeServer() {
+  const el = document.getElementById('homeServerStatus');
+  if (!el) return;
+  if (State.hasServer()) {
+    const p = Providers.get(State.config.provider);
+    const keyOk = !!State.apiKey();
+    el.innerHTML = `
+      <div class="server-card">
+        <div class="label">✅ سرور فعال است</div>
+        <div class="url">${Utils.escapeHtml(State.config.serverUrl)}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;font-size:13px">
+          <span style="color:var(--muted)">ارائه‌دهنده:</span>
+          <b style="color:var(--cyan)">${p.icon} ${p.name}</b>
+          <span style="color:var(--muted)">|</span>
+          <span style="color:var(--muted)">کلید AI:</span>
+          <b style="color:${keyOk?'var(--green)':'var(--amber)'}">${keyOk?'✓ تنظیم شده':'⚠ تنظیم نشده'}</b>
+        </div>
+        <div class="actions">
+          <button class="btn btn-sm" onclick="testServer()">🔌 تست اتصال</button>
+          <button class="btn btn-sm" onclick="copyServerUrl()">📋 کپی آدرس</button>
+          <button class="btn btn-sm" onclick="openServerPanel()">⚙️ تنظیمات</button>
+        </div>
+      </div>`;
+  } else {
+    el.innerHTML = `
+      <div class="notice warn">
+        ⚠️ هنوز سروری نساخته‌ای. برای استفاده از هوش مصنوعی واقعی، یک سرور رایگان بساز.
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="openServerPanel()">⚡ ساخت سرور رایگان</button>
+        <button class="btn" onclick="openServerPanel()">📖 راهنما</button>
+      </div>
+      <p style="font-size:12.5px;color:var(--muted2);margin-top:12px">
+        در حال حاضر تمام ابزارها با حالت نمایشی کار می‌کنند. برای خروجی واقعی، سرور بساز.
+      </p>
+    `;
+  }
+}
+
+function openServerPanel() {
+  const modal = document.getElementById('serverModal');
+  const body = document.getElementById('serverModalBody');
+  modal.classList.add('on');
+
+  if (State.hasServer()) {
+    const p = Providers.get(State.config.provider);
+    const key = State.apiKey();
+    body.innerHTML = `
+      <div class="server-card">
+        <div class="label">✅ سرور فعال است</div>
+        <div class="url">${Utils.escapeHtml(State.config.serverUrl)}</div>
+        <div class="actions">
+          <button class="btn btn-sm" onclick="testServer()">🔌 تست</button>
+          <button class="btn btn-sm" onclick="copyServerUrl()">📋 کپی</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h4 style="font-size:15px;font-weight:700;margin-bottom:10px">🔑 کلید هوش مصنوعی</h4>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:14px">
+        یک کلید رایگان از یکی از این سرویس‌ها بگیر. کلید فقط در مرورگر خودت ذخیره می‌شود.
+      </p>
+
+      <div class="provider-grid">
+        ${Providers.all().map(pr => `
+          <div class="provider-card ${State.config.provider === pr.id ? 'on' : ''}" onclick="selectProvider('${pr.id}')">
+            <div class="pico">${pr.icon}</div>
+            <div class="pinfo">
+              <b>${pr.name} <span class="pbadge">${pr.badge}</span></b>
+              <span>${pr.desc}</span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="field" style="margin-top:14px">
+        <label>کلید ${p.name}</label>
+        <input type="password" id="apiKeyInput" value="${Utils.escapeHtml(key)}" placeholder="کلید خود را وارد کن" style="direction:ltr;text-align:left">
+        <div class="help">
+          دریافت رایگان از <a href="${p.keyUrl}" target="_blank" rel="noopener">${p.keyUrl}</a>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+        <button class="btn btn-primary" onclick="saveApiKey()">💾 ذخیره کلید</button>
+        <button class="btn btn-danger" onclick="removeServer()">🗑 حذف سرور از این مرورگر</button>
+      </div>
+    `;
+  } else {
+    body.innerHTML = `
+      <div class="notice info">
+        💡 یک سرور رایگان روی حساب Cloudflare خودت بساز. بدون کارت اعتباری، در ۳۰ ثانیه.
+      </div>
+
+      <div class="steps" style="margin-bottom:20px">
+        <div class="step"><span class="n">1</span><div class="content"><b>حساب Cloudflare بساز</b><span>اگر نداری، <a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener">اینجا رایگان ثبت‌نام کن</a></span></div></div>
+        <div class="step"><span class="n">2</span><div class="content"><b>API Token بساز</b><span>از <a href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener">این صفحه</a> یک توکن با قالب «Edit Cloudflare Workers» بساز</span></div></div>
+        <div class="step"><span class="n">3</span><div class="content"><b>Account ID پیدا کن</b><span>در داشبورد، Workers & Pages → Account ID (کنار راست)</span></div></div>
+        <div class="step"><span class="n">4</span><div class="content"><b>Subdomain انتخاب کن</b><span>یک‌بار در Workers تنظیم کن (مثلاً نام خودت)</span></div></div>
+      </div>
+
+      <div class="field">
+        <label>API Token <span class="opt">(الزامی)</span></label>
+        <input type="password" id="cfToken" placeholder="توکن خود را اینجا پیست کن" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label>Account ID <span class="opt">(الزامی)</span></label>
+        <input type="text" id="cfAccount" placeholder="a1b2c3d4e5f6..." style="direction:ltr;text-align:left" autocomplete="off">
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label>نام Worker</label>
+          <input type="text" id="cfName" value="nononick-ai" style="direction:ltr;text-align:left">
+        </div>
+        <div class="field">
+          <label>Subdomain <span class="opt">(الزامی)</span></label>
+          <input type="text" id="cfSub" placeholder="مثلاً: ali" style="direction:ltr;text-align:left">
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="btnDetect" onclick="detectAccount()" style="margin-bottom:10px">🔍 تشخیص خودکار Subdomain</button>
+
+      <div class="divider"></div>
+
+      <button class="btn btn-primary btn-block btn-lg" id="btnCreate" onclick="createServer()">
+        🚀 ساخت سرور
+      </button>
+
+      <div class="log" id="log" style="margin-top:16px">آماده برای شروع...</div>
+    `;
+  }
+}
+
+function closeServerPanel() {
+  document.getElementById('serverModal').classList.remove('on');
+}
+
+function logMsg(msg, type = 'info') {
+  const log = document.getElementById('log');
+  if (!log) return;
+  const time = new Date().toLocaleTimeString('fa-IR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const line = document.createElement('div');
+  line.innerHTML = `<span class="muted">[${time}]</span> <span class="${type}">${Utils.escapeHtml(msg)}</span>`;
+  log.appendChild(line);
+  log.scrollTop = log.scrollHeight;
+}
+
+async function detectAccount() {
+  const token = document.getElementById('cfToken').value.trim();
+  const accountId = document.getElementById('cfAccount').value.trim();
+  if (!token || !accountId) return toast('توکن و Account ID را وارد کن', true);
+
+  setBtnLoading('#btnDetect', true, 'در حال بررسی');
+  try {
+    const account = await CloudflareAPI.getAccount(token, accountId);
+    logMsg('✓ حساب: ' + (account.name || account.id), 'ok');
+    const sub = await CloudflareAPI.getSubdomain(token, accountId);
+    if (sub) {
+      document.getElementById('cfSub').value = sub;
+      logMsg('✓ Subdomain: ' + sub, 'ok');
+      toast('Subdomain پیدا شد ✦');
+    } else {
+      logMsg('⚠ Subdomain پیدا نشد', 'warn');
+      toast('Subdomain پیدا نشد — یک‌بار در داشبورد تنظیم کن', true);
+    }
+  } catch (err) {
+    logMsg('✗ ' + err.message, 'err');
+    toast(err.message, true);
+  } finally {
+    setBtnLoading('#btnDetect', false);
+  }
+}
+
+async function createServer() {
+  const token = document.getElementById('cfToken').value.trim();
+  const accountId = document.getElementById('cfAccount').value.trim();
+  const name = document.getElementById('cfName').value.trim() || 'nononick-ai';
+  const sub = document.getElementById('cfSub').value.trim();
+
+  if (!token || !accountId || !sub) return toast('همه فیلدهای الزامی را پر کن', true);
+  if (!/^[a-z0-9-]+$/.test(name)) return toast('نام فقط حروف کوچک و خط تیره', true);
+
+  setBtnLoading('#btnCreate', true, 'در حال ساخت');
+
+  try {
+    logMsg('🚀 شروع ساخت...', 'info');
+    logMsg('مرحله ۱/۳: اعتبارسنجی...', 'info');
+    await CloudflareAPI.getAccount(token, accountId);
+    logMsg('✓ حساب تأیید شد', 'ok');
+
+    logMsg('مرحله ۲/۳: بارگذاری کد سرور...', 'info');
+    await CloudflareAPI.deployWorker(token, accountId, name, WorkerCode.generate());
+    logMsg('✓ کد بارگذاری شد', 'ok');
+
+    logMsg('مرحله ۳/۳: فعال‌سازی آدرس...', 'info');
+    await CloudflareAPI.enableSubdomain(token, accountId, name);
+    logMsg('✓ فعال شد', 'ok');
+
+    const url = `https://${name}.${sub}.workers.dev`;
+
+    State.config.serverUrl = url;
+    State.config.serverName = name;
+    State.config.subdomain = sub;
+    State.config.accountId = accountId;
+    State.config.createdAt = new Date().toISOString();
+    State.saveConfig();
+
+    logMsg('', 'info');
+    logMsg('🎉 سرور ساخته شد!', 'ok');
+    logMsg(url, 'ok');
+
+    toast('سرور با موفقیت ساخته شد ✦');
+    updateServerBadge();
+    renderHomeServer();
+
+    setTimeout(() => {
+      closeServerPanel();
+      setTimeout(() => openServerPanel(), 200);
+    }, 1200);
+
+  } catch (err) {
+    logMsg('✗ ' + err.message, 'err');
+    toast(err.message, true);
+  } finally {
+    setBtnLoading('#btnCreate', false);
+  }
+}
+
+function selectProvider(id) {
+  State.config.provider = id;
+  State.saveConfig();
+  closeServerPanel();
+  setTimeout(() => openServerPanel(), 100);
+}
+
+function saveApiKey() {
+  const input = document.getElementById('apiKeyInput');
+  if (!input) return;
+  const key = input.value.trim();
+  if (!key) return toast('کلید را وارد کن', true);
+  State.config.apiKeys[State.config.provider] = key;
+  State.saveConfig();
+  updateServerBadge();
+  renderHomeServer();
+  toast('کلید ذخیره شد ✦');
+}
+
+async function testServer() {
+  if (!State.hasServer()) return toast('ابتدا سرور بساز', true);
+  const key = State.apiKey();
+  if (!key) return toast('کلید AI را وارد کن', true);
+
+  toast('در حال تست...');
+  try {
+    const r = await CloudflareAPI.testWorker(State.config.serverUrl, State.config.provider, key);
+    toast('✓ اتصال موفق: ' + r.slice(0, 40));
+  } catch (err) {
+    toast('خطا: ' + err.message, true);
+  }
+}
+
+async function copyServerUrl() {
+  if (!State.hasServer()) return;
+  const ok = await Utils.copy(State.config.serverUrl);
+  toast(ok ? 'کپی شد' : 'کپی نشد', !ok);
+}
+
+function removeServer() {
+  if (!confirm('اطلاعات سرور از این مرورگر پاک شود؟ (Worker روی Cloudflare باقی می‌ماند)')) return;
+  State.config.serverUrl = null;
+  State.config.serverName = null;
+  State.config.subdomain = null;
+  State.config.accountId = null;
+  State.saveConfig();
+  updateServerBadge();
+  renderHomeServer();
+  closeServerPanel();
+  toast('حذف شد');
+}
+
+/* ============================================================
+   13. HOME RENDER
+   ============================================================ */
+function renderPopular() {
+  const el = document.getElementById('popularGrid');
+  const ids = ['blog','seo-article','instagram','title','meta','calendar','idea','rewrite'];
+  el.innerHTML = ids.map(id => {
+    const t = CONTENT_TYPES.find(x => x.id === id);
+    if (!t) return '';
+    return `<div class="card" onclick="openType('${t.id}')" tabindex="0" role="button"><div class="ico">${t.ico}</div><h3>${t.n}</h3><p>${t.desc}</p><span class="arrow">←</span></div>`;
+  }).join('');
+}
+
+function renderAllTypes() {
+  const el = document.getElementById('allTypesGrid');
+  el.innerHTML = CONTENT_TYPES.map(t => `<div class="card" onclick="openType('${t.id}')" tabindex="0" role="button"><div class="ico">${t.ico}</div><h3>${t.n}</h3><p>${t.desc}</p><span class="arrow">←</span></div>`).join('');
+}
+
+/* ============================================================
+   14. STUDIO
+   ============================================================ */
+function renderTypeBar() {
+  const el = document.getElementById('typeBar');
+  el.innerHTML = CONTENT_TYPES.map(t => `<button class="type-btn ${t.id === State.contentType ? 'on' : ''}" onclick="openType('${t.id}')">${t.ico} ${t.n}</button>`).join('');
+}
+
+function openType(id) {
+  State.contentType = id;
+  nav('studio');
+  renderTypeBar();
+  renderForm();
+  document.getElementById('outputBox').classList.add('hidden');
+  document.getElementById('outputEmpty').classList.remove('hidden');
+  document.getElementById('seoScoreBox').classList.add('hidden');
+}
+
+function renderForm() {
+  const t = CONTENT_TYPES.find(x => x.id === State.contentType) || CONTENT_TYPES[0];
+  const el = document.getElementById('dynamicForm');
+  const saved = State.formData[t.id] || {};
+  const fields = t.f.map(k => F[k]).filter(Boolean);
+
+  el.innerHTML = `
+    <div style="margin-bottom:16px;padding:12px 14px;background:rgba(77,226,255,.06);border:1px solid rgba(77,226,255,.18);border-radius:12px;font-size:13px;color:var(--cyan)">
+      ${t.ico} <b>${t.n}</b> — ${t.desc}
+    </div>
+    ${fields.map(f => {
+      const v = saved[f.k] !== undefined ? saved[f.k] : (f.def || '');
+      if (f.type === 'pills') {
+        return `<div class="field"><label>${f.label}</label><div class="pills" data-field="${f.k}">${f.opts.map(o => `<button class="pill ${o === v ? 'on' : ''}" onclick="pickPill(this,'${f.k}','${o}')">${o}</button>`).join('')}</div></div>`;
+      }
+      if (f.type === 'textarea') {
+        return `<div class="field"><label>${f.label}${f.req ? ' <span class="opt">(الزامی)</span>' : ''}</label><textarea data-field="${f.k}" placeholder="${f.ph || ''}">${v}</textarea></div>`;
+      }
+      return `<div class="field"><label>${f.label}${f.req ? ' <span class="opt">(الزامی)</span>' : ''}</label><input data-field="${f.k}" type="text" value="${v}" placeholder="${f.ph || ''}"></div>`;
+    }).join('')}
+  `;
+}
+
+function pickPill(btn, field, val) {
+  btn.parentElement.querySelectorAll('.pill').forEach(p => p.classList.remove('on'));
+  btn.classList.add('on');
+  const saved = State.formData[State.contentType] || {};
+  saved[field] = val;
+  State.formData[State.contentType] = saved;
+}
+
+function collectForm() {
+  const el = document.getElementById('dynamicForm');
+  const data = {};
+  el.querySelectorAll('input[data-field], textarea[data-field]').forEach(inp => {
+    data[inp.dataset.field] = inp.value.trim();
+  });
+  el.querySelectorAll('.pills[data-field]').forEach(p => {
+    const on = p.querySelector('.pill.on');
+    if (on) data[p.dataset.field] = on.textContent.trim();
+  });
+  return data;
+}
+
+function resetForm() {
+  delete State.formData[State.contentType];
+  renderForm();
+  toast('فرم پاک شد');
+}
+
+/* ============================================================
+   15. GENERATE
+   ============================================================ */
+async function runGenerate() {
+  const data = collectForm();
+  const t = CONTENT_TYPES.find(x => x.id === State.contentType);
+  const req = t.f.map(k => F[k]).filter(f => f && f.req);
+  for (const r of req) {
+    if (!data[r.k]) {
+      toast('لطفاً «' + r.label + '» را وارد کنید', true);
+      const inp = document.querySelector(`[data-field="${r.k}"]`);
+      if (inp) inp.focus();
+      return;
+    }
+  }
+  State.formData[t.id] = data;
+
+  setBtnLoading('#btnGenerate', true, 'در حال تولید با AI');
+
+  let out = '';
+  let usedAI = false;
+  try {
+    const prompt = Prompts.build(t.id, data, t.n);
+    out = await callAI(prompt);
+    usedAI = true;
+    toast('محتوا با هوش مصنوعی ساخته شد ✦');
+  } catch (err) {
+    if (err.message === 'سرور تنظیم نشده') {
+      toast('سرور تنظیم نشده — خروجی نمایشی', true);
+    } else if (err.message === 'کلید AI تنظیم نشده') {
+      toast('کلید AI تنظیم نشده — خروجی نمایشی', true);
+    } else {
+      toast('خطای AI — خروجی نمایشی', true);
+    }
+    out = generate(t.id, data) + '\n\n---\n\n⚠️ [خروجی نمایشی — برای دریافت خروجی واقعی از هوش مصنوعی، تنظیمات سرور را کامل کن]';
+  } finally {
+    setBtnLoading('#btnGenerate', false);
+  }
+
+  showOutput(out, t.n);
+  saveToHistory({ title: data.topic || data.product || (data.extra || '').slice(0, 50) || t.n, type: t.n + (usedAI ? '' : ' (نمایشی)'), content: out });
+}
+
+async function regenerate() {
+  if (!State.output) return;
+  await runGenerate();
+}
+
+function showOutput(text, typeName) {
+  State.output = text;
+  State.outputType = typeName || '';
+  document.getElementById('outputEmpty').classList.add('hidden');
+  document.getElementById('outputBox').classList.remove('hidden');
+  const body = document.getElementById('editorBody');
+  body.textContent = text;
+  if (typeName && (typeName.includes('سئو') || typeName.includes('مقاله'))) {
+    showSEOScore(text);
+  } else {
+    document.getElementById('seoScoreBox').classList.add('hidden');
+  }
+}
+
+function clearOutput() {
+  State.output = '';
+  document.getElementById('outputBox').classList.add('hidden');
+  document.getElementById('outputEmpty').classList.remove('hidden');
+  document.getElementById('seoScoreBox').classList.add('hidden');
+}
+
+/* ============================================================
+   16. OUTPUT TOOLBAR
+   ============================================================ */
+function copyOutput() {
+  const t = document.getElementById('editorBody').innerText;
+  navigator.clipboard.writeText(t).then(() => toast('متن کپی شد ✦'));
+}
+function copyMarkdown() {
+  const t = '```markdown\n' + document.getElementById('editorBody').innerText + '\n```';
+  navigator.clipboard.writeText(t).then(() => toast('Markdown کپی شد'));
+}
+function downloadTxt() {
+  Utils.download(document.getElementById('editorBody').innerText, 'nononick-content.txt', 'text/plain');
+  toast('دانلود شد ✦');
+}
+function downloadHtml() {
+  const t = document.getElementById('editorBody').innerText;
+  const html = `<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><title>Nononick Content</title><style>body{font-family:Vazirmatn,sans-serif;max-width:780px;margin:40px auto;padding:20px;line-height:1.9;color:#222}</style></head><body><pre style="white-space:pre-wrap;font-family:inherit">${escapeHtml(t)}</pre></body></html>`;
+  Utils.download(html, 'nononick-content.html', 'text/html');
+  toast('دانلود شد ✦');
+}
+
+async function transformOutput(mode) {
+  const body = document.getElementById('editorBody');
+  const current = body.innerText;
+  if (!current) return;
+
+  const instructions = {
+    improve: 'این متن را بهبود بده: وضوح، ساختار و جذابیت را بالا ببر. زبان فارسی روان.',
+    shorten: 'این متن را کوتاه‌تر کن، نکات کلیدی را حفظ کن.',
+    expand: 'این متن را گسترش بده، مثال و توضیح اضافه کن.',
+    rewrite: 'این متن را با ساختار و کلمات متفاوت بازنویسی کن، معنا حفظ شود.',
+    tone: 'این متن را با لحن حرفه‌ای و صمیمی بازنویسی کن.'
+  };
+
+  if (!State.hasServer() || !State.apiKey()) {
+    // Fallback
+    let t = current;
+    if (mode === 'shorten') { const s = t.split(/[.!?؟\n]+/).filter(x => x.trim()); t = s.slice(0, Math.max(3, Math.round(s.length * 0.6))).join('. ') + '.'; }
+    else if (mode === 'expand') { t += '\n\n---\n\n📖 بخش تکمیلی: برای درک عمیق‌تر، نمونه‌های واقعی را بررسی کنید.'; }
+    else if (mode === 'rewrite') { t = t.split('\n').map(l => l.trim()).filter(Boolean).reverse().join('\n'); }
+    else if (mode === 'tone') { t = '🎭 [لحن تنظیم‌شده]\n\n' + t; }
+    else { t += '\n\n---\n\n✨ نسخه بهبودیافته.'; }
+    body.textContent = t;
+    toast('اعمال شد (حالت نمایشی)');
+    return;
+  }
+
+  toast('در حال پردازش...');
+  try {
+    const result = await callAI(instructions[mode] + '\n\n---\n\n' + current);
+    body.textContent = result;
+    toast('اعمال شد ✦');
+  } catch (err) {
+    toast('خطا: ' + err.message, true);
+  }
+}
+
+function shareOutput() {
+  const t = document.getElementById('editorBody').innerText;
+  if (navigator.share) {
+    navigator.share({ title: 'Nononick Content', text: t.slice(0, 300) }).catch(() => {});
+  } else {
+    copyOutput();
+  }
+}
+
+/* ============================================================
+   17. SEO
+   ============================================================ */
+async function runSEO() {
+  const topic = document.getElementById('seoTopic').value.trim();
+  const kw = document.getElementById('seoKw').value.trim();
+  if (!topic || !kw) { toast('موضوع و کلمه کلیدی الزامی است', true); return; }
+
+  const data = {
+    topic,
+    keyword: kw,
+    keywords2: document.getElementById('seoKw2').value.trim(),
+    audience: document.getElementById('seoAud').value.trim() || 'مخاطبان',
+    city: document.getElementById('seoCity').value.trim(),
+    brand: document.getElementById('seoBrand').value.trim() || 'Nononick',
+    cta: document.getElementById('seoCta').value.trim() || 'همین حالا شروع کنید'
+  };
+
+  setBtnLoading('#btnSEO', true, 'در حال ساخت پکیج');
+
+  let out = '';
+  let usedAI = false;
+  try {
+    out = await callAI(Prompts.seo(data));
+    usedAI = true;
+    toast('پکیج سئو با AI ساخته شد ✦');
+  } catch (err) {
+    if (err.message === 'سرور تنظیم نشده' || err.message === 'کلید AI تنظیم نشده') {
+      toast('سرور یا کلید تنظیم نشده — خروجی نمایشی', true);
+    } else {
+      toast('خطای AI — خروجی نمایشی', true);
+    }
+    out = buildSEOMock(data);
+  } finally {
+    setBtnLoading('#btnSEO', false);
+  }
+
+  document.getElementById('seoOutputEmpty').classList.add('hidden');
+  document.getElementById('seoOutputBox').classList.remove('hidden');
+  document.getElementById('seoEditorBody').textContent = out;
+
+  const score = calculateSEOScore({ ...data, meta: out.slice(0, 200), article: out, faq: out, related: ['a','b','c'] });
+  const box = document.getElementById('seoScoreBox');
+  box.classList.remove('hidden');
+  box.innerHTML = renderScoreBox(score);
+  saveToHistory({ title: 'پکیج سئو: ' + topic, type: 'SEO' + (usedAI ? '' : ' (نمایشی)'), content: out });
+}
+
+function buildSEOMock(o) {
+  const related = o.keywords2 ? o.keywords2.split(',').map(s => s.trim()).filter(Boolean) : [o.keyword + ' حرفه‌ای', 'آموزش ' + o.keyword, 'بهترین ' + o.keyword];
+  const slug = slugify(o.keyword);
+  const seoTitle = `${o.topic} | راهنمای کامل ${new Date().getFullYear()}`;
+  const meta = `${o.topic} را با راهنمای کامل ${o.brand} یاد بگیرید. نکات کاربردی برای ${o.audience}. ${o.cta}`;
+  const article = G.blog({ ...o, audience: o.audience, cta: o.cta });
+  const faq = G.faq({ ...o, audience: o.audience });
+  return `# 📦 پکیج کامل سئو — ${o.topic}
+
+## 🏷 SEO Title
+${seoTitle}
+
+## 📝 Meta Description
+${meta} (${meta.length} کاراکتر)
+
+## 🔗 Slug
+/${slug}
+
+## 📰 H1
+${o.topic}
+
+## 📑 H2
+- ${o.keyword} چیست؟
+- چرا مهم است؟
+- مزایای کلیدی
+- چطور شروع کنیم؟
+- اشتباهات رایج
+
+## 📄 H3
+- تعریف ساده
+- نکات کلیدی
+- مثال کاربردی
+
+## 📖 مقاله کامل
+${article}
+
+## ❓ FAQ
+${faq}
+
+## 🧩 FAQ Schema (JSON-LD)
+\`\`\`json
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"${o.keyword} چیست؟","acceptedAnswer":{"@type":"Answer","text":"${o.keyword} مجموعه‌ای از اصول است."}}]}
+\`\`\`
+
+## 🔑 کلمات کلیدی مرتبط
+${related.map(k => '- ' + k).join('\n')}
+
+## 🎯 Search Intent
+Informational
+
+## 👉 CTA
+${o.cta}
+
+## 🔗 Internal Link
+- /blog/${slug}
+- /services.php
+- /contact.php
+
+## 🌐 External Link
+- Wikipedia
+- منبع معتبر صنعتی
+
+## 📱 Open Graph Title
+${seoTitle}
+
+## 📱 Open Graph Description
+${meta.slice(0, 155)}
+
+## 🖼 Image Alt Text
+${o.topic} — راهنمای ${o.keyword}`;
+}
+
+function calculateSEOScore(d) {
+  const checks = [];
+  const wordCount = (d.article || '').split(/\s+/).length;
+  checks.push({ l: 'کلمه کلیدی در عنوان', ok: (d.topic || '').includes(d.keyword) || d.keyword?.length > 0 });
+  checks.push({ l: 'کیفیت عنوان (طول مناسب)', ok: (d.topic || '').length > 10 && (d.topic || '').length < 70 });
+  checks.push({ l: 'طول Meta (۱۲۰–۱۵۵)', ok: (d.meta || '').length >= 100 && (d.meta || '').length <= 200 });
+  checks.push({ l: 'ساختار H2', ok: ((d.article || '').match(/##/g) || []).length >= 3 });
+  checks.push({ l: 'عمق محتوا', ok: wordCount > 500 });
+  checks.push({ l: 'شامل FAQ', ok: (d.faq || '').length > 100 });
+  checks.push({ l: 'شامل CTA', ok: !!d.cta });
+  checks.push({ l: 'کلمات کلیدی مرتبط', ok: (d.related || []).length >= 3 });
+  const passed = checks.filter(c => c.ok).length;
+  return { score: Math.round((passed / checks.length) * 100), checks };
+}
+
+function renderScoreBox(s) {
+  return `<div class="seo-score"><div class="score-ring" style="--p:${s.score}"><span>${s.score}</span></div><div style="flex:1"><div style="font-weight:700;font-size:15px;margin-bottom:8px">SEO Score: ${s.score}/100</div><div class="score-list">${s.checks.map(c => `<div class="score-item"><span class="${c.ok ? 'ok' : 'bad'}">${c.ok ? '✓' : '✗'}</span> ${c.l}</div>`).join('')}</div></div></div>`;
+}
+
+function showSEOScore(text) {
+  const d = { topic: text.split('\n')[0].replace(/^#\s*/, ''), keyword: '', meta: text.slice(0, 200), article: text, faq: text, related: ['a','b','c'], cta: 'has' };
+  const s = calculateSEOScore(d);
+  const box = document.getElementById('seoScoreBox');
+  box.classList.remove('hidden');
+  box.innerHTML = renderScoreBox(s);
+}
+
+function copySEOResult() {
+  navigator.clipboard.writeText(document.getElementById('seoEditorBody').innerText).then(() => toast('کپی شد ✦'));
+}
+function downloadSEOResult() {
+  Utils.download(document.getElementById('seoEditorBody').innerText, 'nononick-seo-package.txt', 'text/plain');
+  toast('دانلود شد ✦');
+}
+
+/* ============================================================
+   18. REPURPOSE
+   ============================================================ */
+async function runRepurpose() {
+  const src = document.getElementById('repurposeInput').value.trim();
+  if (!src) { toast('لطفاً متن خود را وارد کنید', true); return; }
+  const topic = document.getElementById('repurposeTopic').value.trim() || src.slice(0, 40);
+  const brand = document.getElementById('repurposeBrand').value.trim() || '';
+
+  setBtnLoading('#btnRepurpose', true, 'در حال بازتولید');
+
+  const blocks = [
+    { key: 'instagram', title: '📸 ۵ کپشن اینستاگرام' },
+    { key: 'linkedin', title: '💼 ۳ پست لینکدین' },
+    { key: 'x', title: '🐦 ۵ پست X' },
+    { key: 'reels', title: '🎬 سناریوی Reels' },
+    { key: 'youtube', title: '▶️ سناریوی YouTube' },
+    { key: 'hooks', title: '🪝 ۱۰ Hook' },
+    { key: 'titles', title: '🏷 ۱۰ عنوان' },
+    { key: 'ctas', title: '👉 ۵ CTA' },
+    { key: 'newsletter', title: '📧 ۱ Newsletter' }
+  ];
+
+  const isMock = !State.hasServer() || !State.apiKey();
+  const results = [];
+
+  for (const b of blocks) {
+    let content = '';
+    if (isMock) {
+      content = buildRepurposeMock(b.key, src, topic, brand);
+    } else {
+      try {
+        content = await callAI(Prompts.repurpose(b.key, src, topic, brand));
+      } catch (err) {
+        content = buildRepurposeMock(b.key, src, topic, brand) + '\n\n⚠️ [نمایشی — ' + err.message.slice(0, 50) + ']';
+      }
+    }
+    results.push({ title: b.title, content });
+  }
+
+  document.getElementById('repurposeResults').innerHTML = results.map(r => `
+    <div class="panel" style="margin-bottom:14px">
+      <div class="panel-head"><div class="panel-title">${r.title}</div><button class="tbtn" onclick="copyBlock(this)">📋 کپی</button></div>
+      <div class="editor-body" style="max-height:400px">${escapeHtml(r.content)}</div>
+    </div>
+  `).join('');
+
+  setBtnLoading('#btnRepurpose', false);
+  toast('بازتولید انجام شد ✦');
+}
+
+function buildRepurposeMock(key, src, topic, brand) {
+  const sentences = src.split(/[.!?؟\n]+/).map(s => s.trim()).filter(Boolean);
+  if (key === 'instagram') return Array.from({length:5}, (_,i) => `## کپشن ${i+1}\n\n${topic} — نکته ${i+1} 👇\n\n${sentences[i] || src.slice(i*40, i*40+90)}...\n\n${brand ? '— ' + brand : ''}\n#${topic.replace(/\s+/g,'_')}`).join('\n\n');
+  if (key === 'linkedin') return Array.from({length:3}, (_,i) => `## پست ${i+1}\n\n${topic} — چرا مهم است؟\n\n${sentences[i] || src.slice(i*80, i*80+150)}...\n\nنظر شما چیست؟`).join('\n\n');
+  if (key === 'x') return Array.from({length:5}, (_,i) => `${i+1}/ ${sentences[i] || topic}`).join('\n\n');
+  if (key === 'reels') return `**HOOK (۰–۳ث):** ${topic} — اینو ببین.\n**بدنه (۳–۲۵ث):** ${src.slice(0,200)}...\n**CTA (۲۵–۳۰ث):** برای اطلاعات بیشتر دایرکت بده.`;
+  if (key === 'youtube') return `**عنوان:** ${topic}\n**توضیحات:** ${src.slice(0,180)}...\n**تایم‌لاین:** 00:00 مقدمه · 00:45 بدنه · 02:30 جمع‌بندی`;
+  if (key === 'hooks') return Array.from({length:10}, (_,i) => `${i+1}. ${['اگر دنبال '+topic+' هستی، اینو ببین','هیچ‌کس اینو نمی‌گه','این اشتباه ممکنه همه چیز رو خراب کنه','۳ سال طول کشید تا بفهمم','ساده‌تر از اونیه که فکر می‌کنی','قبل از شروع، اینو ببین','چرا تلاشت نتیجه نمی‌ده','سه قدم ساده','راز '+topic,'از همین امروز شروع کن'][i]}`).join('\n');
+  if (key === 'titles') return Array.from({length:10}, (_,i) => `${i+1}. ${['راهنمای کامل '+topic,'چطور شروع کنیم','۱۰ نکته '+topic,'اشتباهات رایج','چرا '+topic+' مهم است','راز '+topic,'مقایسه روش‌ها','راهنمای عملی','آیا ارزشش را دارد؟','از صفر تا صد '+topic][i]}`).join('\n');
+  if (key === 'ctas') return ['همین حالا شروع کن','برای مشاوره تماس بگیر','همین امروز قدم اول را بردار','ثبت‌نام کن','فرصت را از دست نده'].map((x,i)=>`${i+1}. ${x}`).join('\n');
+  if (key === 'newsletter') return `**موضوع:** ${topic} — یک نکته مهم\n\nسلام،\n\nامروز درباره ${topic} صحبت می‌کنم.\n\n${src.slice(0,250)}...\n\nبا احترام${brand ? ',\n' + brand : ''}`;
+  return '';
+}
+
+function copyBlock(btn) {
+  const txt = btn.closest('.panel').querySelector('.editor-body').innerText;
+  navigator.clipboard.writeText(txt).then(() => toast('کپی شد ✦'));
+}
+
+/* ============================================================
+   19. CALENDAR
+   ============================================================ */
+async function runCalendar() {
+  const biz = document.getElementById('calBiz').value.trim() || 'کسب‌وکار شما';
+  const ind = document.getElementById('calIndustry').value;
+  const aud = document.getElementById('calAud').value.trim() || 'مخاطبان';
+  const days = parseInt(document.getElementById('calDays').value);
+  const perWeek = parseInt(document.getElementById('calPerWeek').value);
+
+  setBtnLoading('#btnCalendar', true, 'در حال ساخت تقویم');
+
+  // محاسبه محلی (سریع‌تر)
+  const ideas = ['معرفی کسب‌وکار','پشت صحنه','سوالات پرتکرار','نکته آموزشی','قبل و بعد پروژه','داستان مشتری','اشتباهات رایج','مقایسه خدمات','ترندهای صنعت','راهنمای گام‌به‌گام','معرفی تیم','نظرات مشتریان','نظرسنجی','چک‌لیست','پاسخ به باور غلط'];
+  const types = ['پست اینستاگرام','ریلز','استوری','پست لینکدین','ویدیو کوتاه','کاروسل'];
+  const platforms = ['اینستاگرام','اینستاگرام','لینکدین','X','یوتیوب'];
+
+  let html = `<div style="margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <div><b style="font-size:16px">📅 تقویم ${days} روزه — ${biz}</b><div style="font-size:13px;color:var(--muted)">صنعت: ${ind} · مخاطب: ${aud} · ${perWeek} پست در هفته</div></div>
+    <button class="btn btn-sm" onclick="copyCalendar()">📋 کپی تقویم</button>
+  </div>
+  <div class="cal-grid">`;
+
+  for (let i = 1; i <= days; i++) {
+    if (perWeek < 7 && (i % 7) > perWeek && (i % 7) !== 0) continue;
+    const idea = ideas[(i - 1) % ideas.length];
+    const type = types[(i - 1) % types.length];
+    const platform = platforms[(i - 1) % platforms.length];
+    html += `
+      <div class="cal-day">
+        <div class="dnum">روز ${i}</div>
+        <div class="tag">${type}</div>
+        <div class="dtitle">${idea} — ${biz}</div>
+        <div class="dmeta">
+          <div>🪝 Hook: چرا ${idea} برای ${aud} مهم است؟</div>
+          <div>👉 CTA: برای اطلاعات بیشتر دایرکت بده</div>
+          <div>🔑 کلمه کلیدی: ${biz} ${ind}</div>
+          <div>📱 پلتفرم: ${platform}</div>
+        </div>
+      </div>`;
+  }
+  html += '</div>';
+  document.getElementById('calendarResults').innerHTML = html;
+  setBtnLoading('#btnCalendar', false);
+  toast('تقویم ساخته شد ✦');
+}
+
+function copyCalendar() {
+  const txt = Array.from(document.querySelectorAll('#calendarResults .cal-day')).map(d => d.innerText).join('\n\n---\n\n');
+  navigator.clipboard.writeText(txt).then(() => toast('تقویم کپی شد ✦'));
+}
+
+/* ============================================================
+   20. PROMPT BUILDER
+   ============================================================ */
+function buildPrompt() {
+  const goal = document.getElementById('pbGoal').value.trim();
+  if (!goal) { toast('هدف اصلی را وارد کنید', true); return; }
+  const role = document.getElementById('pbRole').value;
+  const format = document.getElementById('pbFormat').value;
+  const aud = document.getElementById('pbAud').value.trim() || 'مخاطبان هدف';
+  const tone = document.getElementById('pbTone').value;
+  const ctx = document.getElementById('pbContext').value.trim();
+  const cons = document.getElementById('pbConst').value.trim();
+
+  const prompt = `# ROLE
+You are a professional ${role}.
+
+# GOAL
+${goal}
+
+# CONTEXT
+${ctx || '—'}
+
+# AUDIENCE
+${aud}
+
+# TONE
+${tone}
+
+# OUTPUT FORMAT
+${format}
+
+# CONSTRAINTS
+${cons || 'بدون محدودیت خاص. فارسی روان و طبیعی بنویس.'}
+
+# INSTRUCTIONS
+1. پاسخ را کاملاً در قالب ${format} ارائه بده.
+2. لحن ${tone} را در تمام متن حفظ کن.
+3. مستقیم به هدف بپرداز و از مقدمه‌چینی غیرضروری پرهیز کن.
+4. از کلیشه‌ها و «Lorem ipsum» استفاده نکن.
+5. خروجی باید بلافاصله قابل استفاده باشد.
+
+# DELIVERABLE
+${goal}`;
+
+  document.getElementById('promptOut').textContent = prompt;
+  toast('Prompt ساخته شد ✦');
+}
+
+function copyPrompt() {
+  const t = document.getElementById('promptOut').textContent;
+  if (!t || t.includes('هنوز Prompt')) { toast('ابتدا Prompt بسازید', true); return; }
+  navigator.clipboard.writeText(t).then(() => toast('Prompt کپی شد ✦'));
+}
+
+/* ============================================================
+   21. LOCAL SEO
+   ============================================================ */
+async function runLocal() {
+  const service = document.getElementById('locService').value.trim() || 'خدمت شما';
+  const city = document.getElementById('locCity').value.trim() || 'شهر شما';
+  const brand = document.getElementById('locBrand').value.trim() || 'کسب‌وکار شما';
+  const aud = document.getElementById('locAud').value.trim() || 'مشتریان محلی';
+
+  setBtnLoading('#btnLocal', true, 'در حال تولید');
+
+  let out = '';
+  let usedAI = false;
+  try {
+    out = await callAI(Prompts.local({ service, city, brand, audience: aud }));
+    usedAI = true;
+    toast('محتوای محلی با AI ساخته شد ✦');
+  } catch (err) {
+    if (err.message === 'سرور تنظیم نشده' || err.message === 'کلید AI تنظیم نشده') {
+      toast('سرور یا کلید تنظیم نشده — خروجی نمایشی', true);
+    } else {
+      toast('خطای AI — خروجی نمایشی', true);
+    }
+    out = buildLocalMock(service, city, brand, aud);
+  } finally {
+    setBtnLoading('#btnLocal', false);
+  }
+
+  document.getElementById('localOutputEmpty').classList.add('hidden');
+  document.getElementById('localOutputBox').classList.remove('hidden');
+  document.getElementById('localEditorBody').textContent = out;
+  saveToHistory({ title: 'محلی: ' + service + ' — ' + city, type: 'Local' + (usedAI ? '' : ' (نمایشی)'), content: out });
+}
+
+function buildLocalMock(service, city, brand, aud) {
+  return `# ${service} در ${city}
+
+## خدمات ${service} در ${city}
+اگر در ${city} به دنبال ${service} هستید، جای درستی آمده‌اید.
+
+## چرا ما؟
+- تجربه محلی در ${city}
+- شناخت نیازهای ${aud}
+- قیمت منصفانه
+- پشتیبانی واقعی
+
+## سوالات متداول
+**${service} در ${city} چقدر هزینه دارد؟**
+بسته به نیاز شما متفاوت است.
+
+**آیا خدمات در محل ارائه می‌دهید؟**
+بله، در ${city} خدمات حضوری و آنلاین داریم.
+
+## 📍 Google Business Profile Post
+${service} در ${city} — ${brand}
+${aud} عزیز، ما اینجاییم. همین حالا تماس بگیرید.
+
+## 🔑 Local Keywords
+${service} ${city}
+بهترین ${service} ${city}
+${service} حرفه‌ای ${city}
+${service} نزدیک من
+${service} با قیمت مناسب
+${service} در ${city}
+${service} ${city} آنلاین
+مشاوره ${service} ${city}
+
+## 📝 Meta Description
+${service} در ${city} — خدمات حرفه‌ای برای ${aud}. ${brand} با تجربه محلی.
+
+## 👉 CTA
+همین حالا با ${brand} تماس بگیرید و مشاوره رایگان دریافت کنید.`;
+}
+
+function copyLocalResult() {
+  navigator.clipboard.writeText(document.getElementById('localEditorBody').innerText).then(() => toast('کپی شد ✦'));
+}
+
+/* ============================================================
+   22. TOOLS
+   ============================================================ */
+const TOOLS = [
+  { id: 'word', n: 'شمارنده کلمات', d: 'تعداد کلمات، کاراکتر و جمله‌ها', ico: '🔢', fn: toolWordCounter },
+  { id: 'char', n: 'شمارنده کاراکتر', d: 'تعداد کاراکتر با و بدون فاصله', ico: '🔤', fn: toolCharCounter },
+  { id: 'read', n: 'زمان مطالعه', d: 'تخمین زمان مطالعه متن', ico: '⏱', fn: toolReadingTime },
+  { id: 'head', n: 'تولید عنوان', d: '۱۰ تیتر جذاب از موضوع شما', ico: '🏷', fn: toolHeadlines },
+  { id: 'meta', n: 'تولید Meta Description', d: 'توضیحات متای بهینه', ico: '📝', fn: toolMeta },
+  { id: 'slug', n: 'تولید Slug', d: 'ساخت آدرس سئوپسند', ico: '🔗', fn: toolSlug },
+  { id: 'hash', n: 'تولید هشتگ', d: 'هشتگ‌های مرتبط و پرطرفدار', ico: '#️⃣', fn: toolHashtags },
+  { id: 'cta', n: 'تولید CTA', d: 'دعوت به اقدام‌های مؤثر', ico: '👉', fn: toolCTA },
+  { id: 'hook', n: 'تولید Hook', d: 'قلاب‌های شروع محتوا', ico: '🪝', fn: toolHooks },
+  { id: 'cluster', n: 'Keyword Cluster', d: 'خوشه‌بندی کلمات کلیدی', ico: '🧩', fn: toolCluster },
+  { id: 'ideas', n: 'تولید ایده محتوا', d: 'ایده‌های تازه برای پست', ico: '💡', fn: toolIdeas },
+  { id: 'title', n: 'تولید عنوان مقاله', d: 'عنوان‌های جذاب و سئو', ico: '📰', fn: toolTitles },
+  { id: 'sum', n: 'خلاصه‌ساز متن', d: 'خلاصه‌ای از متن بلند', ico: '📌', fn: toolSummarize },
+  { id: 'rew', n: 'بازنویسی متن', d: 'بازنویسی روان و متفاوت', ico: '♻️', fn: toolRewrite },
+  { id: 'faq', n: 'تولید FAQ', d: 'سوالات متداول استاندارد', ico: '❓', fn: toolFAQ },
+  { id: 'alt', n: 'تولید Alt Text', d: 'متن جایگزین تصویر', ico: '🖼', fn: toolAlt }
+];
+
+function renderTools() {
+  const el = document.getElementById('toolsList');
+  el.innerHTML = TOOLS.map(t => `<div class="tool-row" onclick="openTool('${t.id}')" tabindex="0" role="button"><div class="ico">${t.ico}</div><div class="info"><b>${t.n}</b><span>${t.d}</span></div><span class="go">←</span></div>`).join('');
+}
+
+function openTool(id) {
+  const t = TOOLS.find(x => x.id === id);
+  if (!t) return;
+  State.modalTool = id;
+  document.getElementById('modalTitle').textContent = t.ico + ' ' + t.n;
+  document.getElementById('modalBody').innerHTML = `<p style="color:var(--muted);font-size:13.5px;margin-bottom:16px">${t.d}</p><div id="toolWorkspace"></div>`;
+  document.getElementById('toolModal').classList.add('on');
+  t.fn(document.getElementById('toolWorkspace'));
+}
+
+function closeModal() {
+  document.getElementById('toolModal').classList.remove('on');
+  State.modalTool = null;
+}
+
+function toolWordCounter(el) {
+  el.innerHTML = `<div class="field"><label>متن خود را وارد کنید</label><textarea id="tInput" style="min-height:140px" placeholder="متن را اینجا بچسبانید..."></textarea></div><div id="tResult"></div>`;
+  const inp = document.getElementById('tInput');
+  inp.addEventListener('input', () => {
+    const t = inp.value;
+    const words = t.trim() ? t.trim().split(/\s+/).length : 0;
+    document.getElementById('tResult').innerHTML = `<div class="stats" style="margin-top:12px"><div class="stat"><b>${words}</b><span>کلمه</span></div><div class="stat"><b>${t.length}</b><span>کاراکتر</span></div><div class="stat"><b>${t.split(/[.!?؟\n]+/).filter(s=>s.trim()).length}</b><span>جمله</span></div><div class="stat"><b>${t.split(/\n\n+/).filter(s=>s.trim()).length}</b><span>پاراگراف</span></div></div>`;
+  });
+}
+
+function toolCharCounter(el) {
+  el.innerHTML = `<div class="field"><label>متن خود را وارد کنید</label><textarea id="tInput" style="min-height:140px"></textarea></div><div id="tResult"></div>`;
+  const inp = document.getElementById('tInput');
+  inp.addEventListener('input', () => {
+    const t = inp.value;
+    document.getElementById('tResult').innerHTML = `<div class="stats" style="margin-top:12px"><div class="stat"><b>${t.length}</b><span>با فاصله</span></div><div class="stat"><b>${t.replace(/\s/g,'').length}</b><span>بدون فاصله</span></div><div class="stat"><b>${t.split(/\s+/).filter(Boolean).length}</b><span>کلمه</span></div></div>`;
+  });
+}
+
+function toolReadingTime(el) {
+  el.innerHTML = `<div class="field"><label>متن خود را وارد کنید</label><textarea id="tInput" style="min-height:140px"></textarea></div><div id="tResult"></div>`;
+  const inp = document.getElementById('tInput');
+  inp.addEventListener('input', () => {
+    const words = inp.value.trim() ? inp.value.trim().split(/\s+/).length : 0;
+    document.getElementById('tResult').innerHTML = `<div class="stats" style="margin-top:12px"><div class="stat"><b>${Math.max(1, Math.round(words/200))}</b><span>دقیقه</span></div><div class="stat"><b>${words}</b><span>کلمه</span></div></div>`;
+  });
+}
+
+function toolHeadlines(el) {
+  el.innerHTML = `<div class="field"><label>موضوع</label><input id="tTopic" type="text" placeholder="مثلاً: طراحی سایت"></div><button class="btn btn-primary" onclick="runToolHeadlines()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolHeadlines() {
+  const t = document.getElementById('tTopic').value.trim();
+  if (!t) { toast('موضوع را وارد کنید', true); return; }
+  document.getElementById('tResult').innerHTML = `<div class="editor-body" style="max-height:280px">${['راهنمای کامل '+t,'۱۰ نکته '+t,'چرا '+t+' مهم است','آموزش '+t,'اشتباهات رایج در '+t,'راز '+t,'مقایسه روش‌های '+t,t+' در ۵ دقیقه','آیا '+t+' ارزشش را دارد؟','آینده '+t].map((x,i)=>`${i+1}. ${x}`).join('\n')}</div>`;
+}
+
+function toolMeta(el) {
+  el.innerHTML = `<div class="field"><label>موضوع / کلمه کلیدی</label><input id="tTopic" type="text"></div><div class="field"><label>نام برند</label><input id="tBrand" type="text" placeholder="Nononick"></div><button class="btn btn-primary" onclick="runToolMeta()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolMeta() {
+  const t = document.getElementById('tTopic').value.trim();
+  const b = document.getElementById('tBrand').value.trim() || 'ما';
+  if (!t) { toast('موضوع را وارد کنید', true); return; }
+  const arr = [`${t} را با راهنمای کامل ${b} یاد بگیرید.`, `همه چیز درباره ${t}.`, `${t}؟ ${b} راهکاری ساده ارائه می‌دهد.`, `راهنمای گام‌به‌گام ${t}.`, `اگر به دنبال ${t} هستید.`];
+  document.getElementById('tResult').innerHTML = arr.map((m,i)=>`<div class="editor-body" style="margin-bottom:10px;font-size:13.5px"><b>نسخه ${i+1} (${m.length} کاراکتر):</b><br>${m}</div>`).join('');
+}
+
+function toolSlug(el) {
+  el.innerHTML = `<div class="field"><label>عنوان یا عبارت</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolSlug()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolSlug() {
+  const t = document.getElementById('tTopic').value.trim();
+  if (!t) { toast('عنوان را وارد کنید', true); return; }
+  document.getElementById('tResult').innerHTML = `<div class="editor-body" style="font-family:ui-monospace,monospace;direction:ltr;text-align:left">${slugify(t)}</div>`;
+}
+
+function toolHashtags(el) {
+  el.innerHTML = `<div class="field"><label>موضوع</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolHash()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolHash() {
+  const t = document.getElementById('tTopic').value.trim();
+  if (!t) { toast('موضوع را وارد کنید', true); return; }
+  const base = t.replace(/\s+/g, '_');
+  const arr = ['#'+base, '#'+base+'_حرفه‌ای', '#'+base+'_ایران', '#آموزش_'+base, '#'+base+'_ارزان', '#'+base+'_آنلاین', '#بهترین_'+base, '#'+base+'_سریع', '#تولید_محتوا', '#بازاریابی', '#کسب_و_کار', '#اینستاگرام'];
+  document.getElementById('tResult').innerHTML = `<div class="editor-body" style="max-height:none">${arr.join(' ')}</div>`;
+}
+
+function toolCTA(el) {
+  el.innerHTML = `<div class="field"><label>موضوع (اختیاری)</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolCTA()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolCTA() {
+  const t = document.getElementById('tTopic').value.trim();
+  document.getElementById('tResult').innerHTML = ['همین حالا شروع کن','برای مشاوره رایگان تماس بگیر','همین امروز قدم اول را بردار','ثبت‌نام کن و شروع کن','سفارش بده','کلیک کن','فرصت را از دست نده','به ما بپیوند','امتحان کن','اقدام کن'].map((x,i)=>`<div style="padding:8px 12px;border-bottom:1px solid var(--border)">${i+1}. ${t?t+' — ':''}${x}</div>`).join('');
+}
+
+function toolHooks(el) {
+  el.innerHTML = `<div class="field"><label>موضوع</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolHooks()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolHooks() {
+  const t = document.getElementById('tTopic').value.trim() || 'این موضوع';
+  const arr = ['اگر دنبال '+t+' هستی، این ۳۰ ثانیه رو از دست نده.','هیچ‌کس اینو نمی‌گه.','این اشتباه ممکنه همه چیز رو خراب کنه.','مدت‌ها وقت گذاشتم تا اینو بفهمم.','اگه فقط یک چیز یاد بگیری.','تفاوت موفق و ناموفق چیه؟','قبل از شروع، اینو ببین.','ساده‌تر از اونیه که فکر می‌کنی.','چرا تلاش‌هات نتیجه نمی‌ده؟','سه قدم ساده.'];
+  document.getElementById('tResult').innerHTML = arr.map((x,i)=>`<div style="padding:9px 0;border-bottom:1px solid var(--border)">${i+1}. ${x}</div>`).join('');
+}
+
+function toolCluster(el) {
+  el.innerHTML = `<div class="field"><label>کلمه کلیدی اصلی</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolCluster()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolCluster() {
+  const t = document.getElementById('tTopic').value.trim();
+  if (!t) { toast('کلمه کلیدی را وارد کنید', true); return; }
+  const groups = {
+    'Informational': [t+' چیست', t+' چطور کار می‌کند', 'آموزش '+t, 'راهنمای '+t, t+' برای مبتدیان'],
+    'Commercial': ['بهترین '+t, t+' حرفه‌ای', 'مقایسه '+t, t+' خوب', 'انتخاب '+t],
+    'Transactional': ['خرید '+t, t+' قیمت', t+' ارزان', t+' آنلاین', 'سفارش '+t],
+    'Local': [t+' تهران', t+' اصفهان', t+' نزدیک من', 'بهترین '+t+' در شهر', t+' محلی']
+  };
+  document.getElementById('tResult').innerHTML = Object.entries(groups).map(([k,v])=>`<div style="margin-bottom:12px"><b style="color:var(--cyan);font-size:13.5px">${k}</b><div style="margin-top:6px">${v.map(x=>`<span class="tag">${x}</span>`).join('')}</div></div>`).join('');
+}
+
+function toolIdeas(el) {
+  el.innerHTML = `<div class="field"><label>موضوع کسب‌وکار</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolIdeas()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolIdeas() {
+  const t = document.getElementById('tTopic').value.trim() || 'کسب‌وکار شما';
+  const arr = ['پشت صحنه یک روز کاری','معرفی محصول محبوب','قبل و بعد یک پروژه','سوالات پرتکرار مشتریان','نکته آموزشی کوتاه','داستان مشتری راضی','اشتباهات رایج','ترندهای جدید','راهنمای گام‌به‌گام','معرفی تیم','نظرسنجی','توصیه تخصصی','محتوای فصلی','پاسخ به باور غلط','چک‌لیست کاربردی'];
+  document.getElementById('tResult').innerHTML = arr.map((x,i)=>`<div style="padding:8px 0;border-bottom:1px solid var(--border)">${i+1}. ${x} — ${t}</div>`).join('');
+}
+
+function toolTitles(el) {
+  el.innerHTML = `<div class="field"><label>موضوع</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolTitles()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolTitles() {
+  const t = document.getElementById('tTopic').value.trim() || 'موضوع';
+  const arr = ['راهنمای کامل '+t,'۱۰ نکته '+t,'چرا '+t+' مهم است','آموزش '+t,'اشتباهات رایج','راز '+t,'مقایسه روش‌ها',t+' از صفر تا صد','آیا ارزشش را دارد؟','۷ ترفند '+t];
+  document.getElementById('tResult').innerHTML = arr.map((x,i)=>`<div style="padding:9px 0;border-bottom:1px solid var(--border)">${i+1}. ${x}</div>`).join('');
+}
+
+function toolSummarize(el) {
+  el.innerHTML = `<div class="field"><label>متن بلند</label><textarea id="tTopic" style="min-height:140px"></textarea></div><button class="btn btn-primary" onclick="runToolSummarize()">خلاصه کن ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolSummarize() {
+  const t = document.getElementById('tTopic').value.trim();
+  if (!t) { toast('متن را وارد کنید', true); return; }
+  const sent = t.split(/[.!?؟\n]+/).map(s=>s.trim()).filter(s=>s.length>10);
+  const pick = sent.slice(0, Math.max(3, Math.round(sent.length*0.35)));
+  document.getElementById('tResult').innerHTML = `<div class="editor-body">${pick.map((s,i)=>`${i+1}. ${s}.`).join('<br><br>')}</div>`;
+}
+
+function toolRewrite(el) {
+  el.innerHTML = `<div class="field"><label>متن اصلی</label><textarea id="tTopic" style="min-height:140px"></textarea></div><button class="btn btn-primary" onclick="runToolRewrite()">بازنویسی کن ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolRewrite() {
+  const t = document.getElementById('tTopic').value.trim();
+  if (!t) { toast('متن را وارد کنید', true); return; }
+  const out = t.replace(/است/g,'به شمار می‌رود').replace(/می‌شود/g,'رخ می‌دهد').replace(/می‌کند/g,'انجام می‌دهد');
+  document.getElementById('tResult').innerHTML = `<div class="editor-body">${out}</div>`;
+}
+
+function toolFAQ(el) {
+  el.innerHTML = `<div class="field"><label>موضوع</label><input id="tTopic" type="text"></div><button class="btn btn-primary" onclick="runToolFAQ()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolFAQ() {
+  const t = document.getElementById('tTopic').value.trim() || 'این موضوع';
+  const arr = [[`${t} چیست؟`, `${t} مجموعه‌ای از اصول است.`], [`چرا مهم است؟`, `چون رقابت زیاد است.`], [`چطور شروع کنم؟`, `با یک قدم کوچک.`], [`هزینه چقدر است؟`, `بسته به نیاز شما متفاوت است.`], [`چقدر زمان می‌برد؟`, `چند هفته تا چند ماه.`]];
+  document.getElementById('tResult').innerHTML = arr.map(([q,a])=>`<div style="padding:10px 0;border-bottom:1px solid var(--border)"><b>${q}</b><br><span style="color:var(--muted);font-size:13.5px">${a}</span></div>`).join('');
+}
+
+function toolAlt(el) {
+  el.innerHTML = `<div class="field"><label>توضیح تصویر</label><input id="tTopic" type="text"></div><div class="field"><label>کلمه کلیدی (اختیاری)</label><input id="tKw" type="text"></div><button class="btn btn-primary" onclick="runToolAlt()">تولید ✦</button><div id="tResult" style="margin-top:14px"></div>`;
+}
+function runToolAlt() {
+  const t = document.getElementById('tTopic').value.trim();
+  const kw = document.getElementById('tKw').value.trim();
+  if (!t) { toast('توضیح را وارد کنید', true); return; }
+  const arr = [t, kw ? kw + ' — ' + t : t, 'تصویری از ' + t, kw ? kw + ' : ' + t : 'نمایش ' + t];
+  document.getElementById('tResult').innerHTML = arr.map((x,i)=>`<div style="padding:8px 0;border-bottom:1px solid var(--border)">${i+1}. ${x}</div>`).join('');
+}
+
+/* ============================================================
+   23. HISTORY
+   ============================================================ */
+function loadHistory() {
+  try {
+    const h = JSON.parse(localStorage.getItem('nononick_history') || '[]');
+    State.history = Array.isArray(h) ? h : [];
+  } catch (e) { State.history = []; }
+}
+
+function saveToHistory(item) {
+  item.date = new Date().toISOString();
+  item.id = 'h' + Date.now() + Math.random().toString(36).slice(2, 6);
+  State.history.unshift(item);
+  if (State.history.length > 100) State.history = State.history.slice(0, 100);
+  try { localStorage.setItem('nononick_history', JSON.stringify(State.history)); } catch (e) {}
+}
+
+function renderHistory() {
+  const el = document.getElementById('historyList');
+  if (!State.history.length) {
+    el.innerHTML = `<div class="output-empty"><div><div class="big">📂</div><div>هنوز خروجی ذخیره نشده است</div><div style="font-size:12.5px;margin-top:6px;color:var(--muted2)">اولین محتوای خود را بسازید</div></div></div>`;
+    return;
+  }
+  const now = new Date();
+  const groups = { today: [], yesterday: [], week: [], older: [] };
+  State.history.forEach(h => {
+    const d = new Date(h.date);
+    const diff = Math.floor((now - d) / (1000 * 60 * 60 * 24));
+    if (diff < 1) groups.today.push(h);
+    else if (diff < 2) groups.yesterday.push(h);
+    else if (diff < 7) groups.week.push(h);
+    else groups.older.push(h);
+  });
+  const labels = { today: 'امروز', yesterday: 'دیروز', week: '۷ روز گذشته', older: 'قدیمی‌تر' };
+  el.innerHTML = Object.entries(groups).map(([k, arr]) => {
+    if (!arr.length) return '';
+    return `<div class="hist-group"><h4>${labels[k]}</h4>${arr.map(h => `
+      <div class="hist-item">
+        <div class="info"><b>${escapeHtml(h.title || 'بدون عنوان')}</b><span>${h.type} · ${new Date(h.date).toLocaleDateString('fa-IR')}</span></div>
+        <div class="acts">
+          <button class="icon-btn" onclick="viewHistoryItem('${h.id}')" title="مشاهده">👁</button>
+          <button class="icon-btn" onclick="copyHistoryItem('${h.id}')" title="کپی">📋</button>
+          <button class="icon-btn" onclick="deleteHistoryItem('${h.id}')" title="حذف">🗑</button>
+        </div>
+      </div>`).join('')}</div>`;
+  }).join('');
+}
+
+function viewHistoryItem(id) {
+  const h = State.history.find(x => x.id === id);
+  if (!h) return;
+  nav('studio');
+  document.getElementById('outputEmpty').classList.add('hidden');
+  document.getElementById('outputBox').classList.remove('hidden');
+  document.getElementById('editorBody').textContent = h.content;
+  State.output = h.content;
+  toast('باز شد');
+}
+function copyHistoryItem(id) {
+  const h = State.history.find(x => x.id === id);
+  if (h) navigator.clipboard.writeText(h.content).then(() => toast('کپی شد ✦'));
+}
+function deleteHistoryItem(id) {
+  State.history = State.history.filter(x => x.id !== id);
+  try { localStorage.setItem('nononick_history', JSON.stringify(State.history)); } catch (e) {}
+  renderHistory();
+  toast('حذف شد');
+}
+function clearHistory() {
+  if (!confirm('همه تاریخچه پاک شود؟')) return;
+  State.history = [];
+  localStorage.removeItem('nononick_history');
+  renderHistory();
+  toast('تاریخچه پاک شد');
+}
+
+/* ============================================================
+   24. FAQ
+   ============================================================ */
+const FAQ_ITEMS = [
+  { q: 'Nononick Content Studio رایگان است؟', a: 'بله. تمام ابزارها بدون نیاز به ثبت‌نام و به صورت رایگان قابل استفاده هستند. همچنین می‌توانید از مدل‌های هوش مصنوعی رایگان مثل Groq، Gemini، OpenRouter و Cerebras استفاده کنید.' },
+  { q: 'از چه مدل هوش مصنوعی استفاده می‌کند؟', a: 'چهار ارائه‌دهنده رایگان: Groq (سریع‌ترین)، Google Gemini (context طولانی)، OpenRouter (۲۵+ مدل)، و Cerebras (۱M توکن در روز). از دکمه «سرور: تنظیم نشده» در بالای صفحه انتخاب کنید.' },
+  { q: 'آیا محتوای تولیدشده قابل ویرایش است؟', a: 'بله. خروجی در یک ویرایشگر کامل با قابلیت کپی، دانلود (TXT/HTML)، بازنویسی، کوتاه/بلند کردن، تغییر لحن و چاپ نمایش داده می‌شود.' },
+  { q: 'اطلاعات من کجا ذخیره می‌شود؟', a: 'تاریخچه و کلیدهای API فقط در LocalStorage مرورگر خود شما ذخیره می‌شوند. هیچ داده‌ای به سرور Nononick ارسال نمی‌شود.' },
+  { q: 'چطور سرور رایگان بسازم؟', a: 'روی دکمه قرمز «سرور: تنظیم نشده» در بالای صفحه بزنید. راهنمای گام‌به‌گام ساخته‌شده است. فقط یک حساب Cloudflare رایگان و یک توکن لازم است. در ۳۰ ثانیه سرور ساخته می‌شود.' },
+  { q: 'چرا سرور لازم است؟', a: 'چون مرورگر اجازه نمی‌دهد مستقیماً با APIهای هوش مصنوعی حرف بزند (خطای CORS). سرور واسط این مشکل را حل می‌کند و کلیدها امن می‌مانند.' },
+  { q: 'بدون سرور هم کار می‌کند؟', a: 'بله، با حالت نمایشی. اما برای خروجی واقعی هوش مصنوعی، سرور لازم است.' },
+  { q: 'هزینه ساخت سرور چقدر است؟', a: 'صفر. Cloudflare Workers ۱۰۰,۰۰۰ درخواست در روز را رایگان می‌دهد. برای اکثر کاربران بیش از کافی است.' }
+];
+
+function renderFAQ() {
+  document.getElementById('faqList').innerHTML = FAQ_ITEMS.map(f => `
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">${f.q}<span class="pm">+</span></div>
+      <div class="faq-a"><div>${f.a}</div></div>
+    </div>
+  `).join('');
+}
+
+/* ============================================================
+   25. HERO / QUICK START
+   ============================================================ */
+function heroGo() {
+  const v = document.getElementById('heroInput').value.trim();
+  if (!v) { nav('studio'); return; }
+  State.formData['blog'] = { topic: v };
+  openType('blog');
+  toast('موضوع ثبت شد — فرم را کامل کنید');
+}
+
+function quickStart(type) {
+  if (type === 'calendar') { nav('calendar'); return; }
+  if (type === 'seo') { nav('seo'); return; }
+  if (type === 'rewrite') { openType('rewrite'); return; }
+  openType(type);
+}
+
+/* ============================================================
+   26. INIT
+   ============================================================ */
+function init() {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  State.loadConfig();
+  loadHistory();
+  renderPopular();
+  renderAllTypes();
+  renderTypeBar();
+  renderForm();
+  renderTools();
+  renderFAQ();
+  updateServerBadge();
+  renderHomeServer();
+
+  const initial = location.hash.replace('#', '') || 'home';
+  nav(initial, false);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModal();
+      closeServerPanel();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
